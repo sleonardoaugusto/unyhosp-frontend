@@ -2,7 +2,7 @@
   <div class="home col-md-12">
     <div class="row">
       <div class="col-md-12 d-flex justify-content-center">
-        <h1>Hospitais</h1>
+        <h1>Leitos</h1>
       </div>
     </div>
     <div class="row">

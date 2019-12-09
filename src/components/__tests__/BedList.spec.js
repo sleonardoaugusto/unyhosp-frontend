@@ -21,7 +21,7 @@ describe('HospitalList.vue', () => {
     expect(bedcard.exists()).toBeFalsy()
   })
 
-  it('not render child component if bed data is empty', () => {
+  it('renders child component if bed data is not empty', () => {
     wrapper.setData({ beds: beds.data })
     const bedcard = wrapper.find(BedCard)
     expect(bedcard.exists()).toBeTruthy()

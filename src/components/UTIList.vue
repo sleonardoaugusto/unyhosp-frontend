@@ -19,7 +19,8 @@ export default {
     utis: []
   }),
   created() {
-    this.utis = utis.data
+    const hospitalId = this.$route.params.hospitalId
+    this.utis = utis.data.filter(u => u.hospital_id == hospitalId)
   }
 }
 </script>

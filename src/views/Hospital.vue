@@ -1,0 +1,23 @@
+<template>
+  <div class="home col-md-12">
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-center">
+        <h1>Hospitais</h1>
+      </div>
+    </div>
+    <div class="row">
+      <hospital-list/>
+    </div>
+  </div>
+</template>
+
+<script>
+import HospitalList from '@/components/HospitalList'
+
+export default {
+  name: 'home',
+  components: {
+    HospitalList
+  }
+}
+</script>

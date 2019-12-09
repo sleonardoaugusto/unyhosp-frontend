@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BedCard.vue component is rendering properly 1`] = `
+<div class="card col-md-5">
+  <p class="card__name">Box A</p>
+  <div class="card__preview">
+    <p class="card__text-content">
+      Paciente:
+      <span>Maria Joaquina</span></p>
+    <p class="card__text-content">
+      Data:
+      <span>09/12/2019</span></p>
+    <p class="card__text-content">
+      Diagnóstico:
+      <span>Apendicite</span></p>
+    <p class="card__text-content">
+      Data:
+      <span>UNIMED</span></p>
+  </div>
+</div>
+`;

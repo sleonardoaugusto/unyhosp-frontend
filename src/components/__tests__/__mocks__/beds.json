@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Box A",
+      "uti_id": 1,
+      "date": "09/12/2019",
+      "pacient": {
+        "name": "Maria Joaquina",
+        "diagnostic": "Apendicite",
+        "health_plan": "UNIMED"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Box B",
+      "uti_id": 1,
+      "pacient": {
+        "name": "Pedro Alvares",
+        "diagnostic": "Dengue",
+        "health_plan": "Santa Casa"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Box C",
+      "uti_id": 1,
+      "pacient": null
+    }
+  ]
+}

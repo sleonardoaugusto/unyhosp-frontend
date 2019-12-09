@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Hospital from '../views/Hospital'
-import UTIList from '@/components/UTIList'
+import UTI from '@/views/UTI'
 
 Vue.use(VueRouter)
 
@@ -17,7 +17,7 @@ const routes = [
   }, {
     path: '/hospital/:hospitalId/',
     name: 'hospital-utis',
-    component: UTIList
+    component: UTI
   }
 ]
 

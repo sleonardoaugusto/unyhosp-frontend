@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "UTI A - São Joaquim",
+      "hospital_id": 1
+    },
+    {
+      "id": 2,
+      "name": "UTI B - São Joaquim",
+      "hospital_id": 1
+    },
+    {
+      "id": 3,
+      "name": "UTI C - São Joaquim",
+      "hospital_id": 1
+    }
+  ]
+}

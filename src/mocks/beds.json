@@ -6,6 +6,7 @@
       "uti_id": 1,
       "date": "09/12/2019",
       "pacient": {
+        "id": 1,
         "name": "Maria Joaquina",
         "diagnostic": "Apendicite",
         "health_plan": "UNIMED"
@@ -17,6 +18,7 @@
       "uti_id": 1,
       "date": "02/12/2019",
       "pacient": {
+        "id": 2,
         "name": "Pedro Alvares",
         "diagnostic": "Dengue",
         "health_plan": "Santa Casa"

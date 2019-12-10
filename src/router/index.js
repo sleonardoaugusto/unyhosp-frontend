@@ -20,11 +20,11 @@ const routes = [
     name: 'hospital-utis',
     component: UTIs
   }, {
-    path: '/hospital/:hospitalId/uti/:utiId/beds',
+    path: '/hospital/:hospitalId/uti/:utiId/beds/',
     name: 'uti-beds',
     component: Beds
   }, {
-    path: '/pacient/:pacientId',
+    path: '/pacient/:pacientId/',
     name: 'pacient',
     component: Pacient
   }

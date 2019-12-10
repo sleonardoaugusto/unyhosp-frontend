@@ -12,7 +12,7 @@ const routes = [
     path: '/',
     redirect: '/hospitals'
   }, {
-    path: '/hospitals',
+    path: '/hospitais',
     name: 'hospitals',
     component: Hospitals
   }, {

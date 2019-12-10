@@ -1,5 +1,5 @@
 <template>
-  <div class="card col-md-5">
+  <div class="card col-md-3">
     <p class="card__name">{{ bed.name }}</p>
     <div v-if="hasPacient" class="card__preview">
       <p class="card__text-content">

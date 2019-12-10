@@ -1,5 +1,5 @@
 <template>
-  <div class="home col-md-12">
+  <div class="col-md-12">
     <div class="row">
       <div class="col-md-12 d-flex justify-content-center">
         <h1>Leitos</h1>

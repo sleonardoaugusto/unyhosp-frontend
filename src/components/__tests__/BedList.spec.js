@@ -1,4 +1,4 @@
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 import BedList from '@/components/BedList'
 import BedCard from '@/components/BedCard'
 import beds from '@/components/__tests__/__mocks__/beds'
@@ -7,7 +7,11 @@ describe('HospitalList.vue', () => {
   let wrapper
 
   beforeEach(() => {
-    wrapper = shallowMount(BedList)
+    wrapper = shallowMount(BedList, {
+      stubs: {
+        RouterLink: RouterLinkStub
+      }
+    })
   })
 
   it('component is rendering properly', () => {

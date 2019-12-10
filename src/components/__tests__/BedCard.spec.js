@@ -1,4 +1,4 @@
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 import BedCard from '@/components/BedCard'
 import beds from '@/components/__tests__/__mocks__/beds'
 
@@ -8,7 +8,10 @@ describe('BedCard.vue', () => {
 
   beforeEach(() => {
     wrapper = shallowMount(BedCard, {
-      propsData
+      propsData,
+      stubs: {
+        RouterLink: RouterLinkStub
+      }
     })
   })
 

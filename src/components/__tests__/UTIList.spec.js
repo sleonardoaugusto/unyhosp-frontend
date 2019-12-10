@@ -1,4 +1,4 @@
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 import UTIList from '@/components/UTIList'
 import utis from '@/components/__tests__/__mocks__/utis'
 
@@ -9,9 +9,12 @@ describe('HospitalList.vue', () => {
   const $route = {
     params: { hospitalId: 1 }
   }
-  
+
   beforeEach(() => {
     wrapper = shallowMount(UTIList, {
+      stubs: {
+        RouterLink: RouterLinkStub
+      },
       mocks: {
         $route
       }

@@ -1,15 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HospitalList.vue component is rendering properly 1`] = `
-<div class="col-md-12 d-flex justify-content-center flex-wrap">
-  <div class="card col-md-5">
-    <p>São Joaquim</p>
-  </div>
-  <div class="card col-md-5">
-    <p>Albert Einstein</p>
-  </div>
-  <div class="card col-md-5">
-    <p>São Pedro</p>
-  </div>
-</div>
+<div class="col-md-12 d-flex justify-content-center flex-wrap"><a class="card col-md-5">
+    <p class="card__name">São Joaquim</p>
+  </a><a class="card col-md-5">
+    <p class="card__name">Albert Einstein</p>
+  </a><a class="card col-md-5">
+    <p class="card__name">São Pedro</p>
+  </a></div>
 `;

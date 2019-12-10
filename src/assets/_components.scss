@@ -1,6 +1,7 @@
 @import 'base';
 
 .card {
+  padding: 1rem;
   text-decoration: none;
   min-height: 5rem;
   display: flex;
@@ -22,5 +23,13 @@
   &__text-content {
     font-size: 13px;
     font-weight: 500;
+  }
+
+  &__author {
+    align-self: start;
+    margin-top: .5rem;
+    font-size: 16px;
+    font-weight: 600;
+    color: #555453;
   }
 }

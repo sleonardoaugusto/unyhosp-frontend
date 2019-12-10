@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   margin: 1rem;
-  background: #F4F4F2;
+  background: $grey-smoke;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   cursor: pointer;
@@ -16,7 +16,7 @@
 
   &__name {
     font-weight: 500;
-    color: #555453;
+    color: $dark-grey;
     margin: .7rem;
   }
 
@@ -30,6 +30,6 @@
     margin-top: .5rem;
     font-size: 16px;
     font-weight: 600;
-    color: #555453;
+    color: $dark-grey;
   }
 }

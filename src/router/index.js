@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Hospital from '../views/Hospital'
-import UTI from '@/views/UTI'
-import Bed from '@/views/Bed'
+import Hospitals from '@/views/Hospitals'
+import UTIs from '@/views/UTIs'
+import Beds from '@/views/Beds'
 
 Vue.use(VueRouter)
 
@@ -14,15 +14,15 @@ const routes = [
   {
     path: '/hospitals',
     name: 'hospitals',
-    component: Hospital
+    component: Hospitals
   }, {
     path: '/hospital/:hospitalId/uti/',
     name: 'hospital-utis',
-    component: UTI
+    component: UTIs
   }, {
     path: '/hospital/:hospitalId/uti/:utiId/beds',
     name: 'uti-beds',
-    component: Bed
+    component: Beds
   }
 ]
 

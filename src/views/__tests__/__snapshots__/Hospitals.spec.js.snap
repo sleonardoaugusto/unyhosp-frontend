@@ -1,18 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Beds.vue renders component properly 1`] = `
-<div class="home col-md-12">
-  <div class="row">
-    <div class="col-md-12 d-flex justify-content-center">
-      <h1>Leitos</h1>
-    </div>
-  </div>
-  <div class="row">
-    <bed-list-stub></bed-list-stub>
-  </div>
-</div>
-`;
-
 exports[`Hospitals.vue renders component properly 1`] = `
 <div class="home col-md-12">
   <div class="row">

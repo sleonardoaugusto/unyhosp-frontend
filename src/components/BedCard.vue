@@ -4,7 +4,7 @@
     <div v-if="hasPacient" class="card__preview">
       <p class="card__text-content">
         Paciente:
-        <span>{{ bed.pacient.name }}</span>
+        <router-link :to="{name: 'pacient', params: {pacientId: bed.pacient.id}}">{{ bed.pacient.name }}</router-link>
       </p>
       <p class="card__text-content">
         Data:

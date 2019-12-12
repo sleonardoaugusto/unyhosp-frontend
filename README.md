@@ -1,4 +1,4 @@
-# unyhosp
+# unyhosp-frontend
 
 ## Project setup
 ```

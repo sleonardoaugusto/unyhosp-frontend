@@ -11,7 +11,7 @@
         </div>
         <div class="row d-flex flex-column m-3">
           <label for="Entry">Dias de UTI:</label>
-          <input type="text" id="Entry" v-model="attendance.entry">
+          <input type="text" id="Entry" v-model="attendance.created">
         </div>
         <div class="row d-flex flex-column m-3">
           <label for="Age">Idade:</label>

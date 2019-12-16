@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Hospitals from '@/views/Hospitals'
 import UTIs from '@/views/UTIs'
 import Beds from '@/views/Beds'
-import Pacient from '@/views/Pacient'
+import Attendance from '@/views/Attendance'
 
 Vue.use(VueRouter)
 
@@ -24,9 +24,9 @@ const routes = [
     name: 'uti-beds',
     component: Beds
   }, {
-    path: '/pacient/:pacientId/',
-    name: 'pacient',
-    component: Pacient
+    path: '/attendance/:pacientId/',
+    name: 'attendance',
+    component: Attendance
   }
 ]
 

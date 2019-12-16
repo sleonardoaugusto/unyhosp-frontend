@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
-import Pacient from '@/views/Pacient'
+import Pacient from '@/views/Attendance'
 
-describe('Pacient.vue', () => {
+describe('Attendance.vue', () => {
   let wrapper
 
   wrapper = shallowMount(Pacient)

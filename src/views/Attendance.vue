@@ -1,7 +1,7 @@
 <template>
   <div class="col-md-12">
     <div class="row d-flex justify-content-center">
-      <h1>Paciente</h1>
+      <h1>Atendimento</h1>
     </div>
     <div class="row d-flex justify-content-center">
       <div class="col-md-6">

@@ -6,7 +6,8 @@ exports[`BedCard.vue component is rendering properly 1`] = `
   <div class="card__preview">
     <p class="card__text-content">
       Paciente:
-      <a>Maria Joaquina</a></p>
+      <router-link-stub to="[object Object]" tag="a" event="click">Maria Joaquina</router-link-stub>
+    </p>
     <p class="card__text-content">
       Data:
       <span>09/12/2019</span></p>

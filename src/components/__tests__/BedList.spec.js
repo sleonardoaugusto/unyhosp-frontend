@@ -1,16 +1,18 @@
-import { shallowMount, RouterLinkStub } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
+import VueRouter from 'vue-router'
 import BedList from '@/components/BedList'
 import BedCard from '@/components/BedCard'
 import beds from '@/components/__tests__/__mocks__/beds'
+
+const localVue = createLocalVue()
+localVue.use(VueRouter)
 
 describe('HospitalList.vue', () => {
   let wrapper
 
   beforeEach(() => {
     wrapper = shallowMount(BedList, {
-      stubs: {
-        RouterLink: RouterLinkStub
-      }
+      localVue
     })
   })
 

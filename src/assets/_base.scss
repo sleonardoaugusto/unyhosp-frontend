@@ -74,3 +74,21 @@ html {
 .w-25 {
   width: 25% !important;
 }
+
+label {
+  margin: .2rem 0;
+  font-weight: 500;
+  color: $light-green;
+}
+
+input {
+  &[type="text"] {
+    padding: .3rem .5rem;
+    border-radius: 5px;
+    border: 2px solid $dark-grey;
+    background-color: #FDFFFC;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

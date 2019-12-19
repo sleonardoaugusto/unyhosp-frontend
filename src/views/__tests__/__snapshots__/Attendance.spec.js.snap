@@ -3,55 +3,8 @@
 exports[`Attendance.vue renders component properly 1`] = `
 <div class="col-md-12">
   <div class="row d-flex justify-content-center">
-    <h1>Atendimento</h1>
+    <h1 class="type-h2 type-light-green">Atendimento</h1>
   </div>
-  <div class="row d-flex justify-content-center">
-    <div class="col-md-6">
-      <div class="row d-flex flex-column m-3"><label for="PacientName">Nome:</label> <input type="text" id="PacientName"></div>
-      <div class="row d-flex flex-column m-3"><label for="Entry">Dias de UTI:</label> <input type="text" id="Entry"></div>
-      <div class="row d-flex flex-column m-3"><label for="Age">Idade:</label> <input type="text" id="Age"></div>
-      <div class="row d-flex flex-column m-3"><label for="HMA">HMA</label> <input type="text" id="HMA"></div>
-      <div class="row d-flex flex-column m-3"><label for="EntryReason">Motivo da Admissão:</label> <input type="text" id="EntryReason"></div>
-      <div class="row d-flex flex-column m-3"><label for="Comorbidity">Comorbidades</label> <input type="text" id="Comorbidity"></div>
-      <div class="row d-flex flex-column m-3"><label for="ATB">ATB:</label> <input type="text" id="ATB"></div>
-      <div class="row d-flex flex-column m-3"><label for="HD">HD:</label> <input type="text" id="HD"></div>
-      <div class="row d-flex flex-column m-3"><label for="MedicinesInUse">Medicamentos em uso:</label> <input type="text" id="MedicinesInUse"></div>
-      <div class="row d-flex flex-column m-3"><label for="PreviousPathologies">Patologias Prévias:</label> <input type="text" id="PreviousPathologies"></div>
-      <div class="row d-flex flex-column m-3"><label for="Allergies">Alergias:</label> <input type="text" id="Allergies"></div>
-      <div class="row d-flex flex-column m-3"><label for="Cultures">Culturas:</label> <input type="text" id="Cultures"></div>
-      <div class="row d-flex flex-column m-3"><label for="VasoactiveDrugs">Drogas Vasoativas:</label> <input type="text" id="VasoactiveDrugs"></div>
-      <div class="row d-flex flex-column m-3"><label for="Sedation">Sedação:</label> <input type="text" id="Sedation"></div>
-      <div class="row d-flex flex-column m-3"><label for="VenousAccess">Acesso Venoso:</label> <input type="text" id="VenousAccess"></div>
-      <div class="row d-flex flex-column m-3"><label for="Diet">Dieta:</label> <input type="text" id="Diet"></div>
-      <div class="row d-flex flex-column m-3"><label for="ProbesAndDrains">Sondas e Drenos:</label> <input type="text" id="ProbesAndDrains"></div>
-      <div class="row d-flex flex-column m-3"><label for="Ventilation">Ventilação:</label> <input type="text" id="Ventilation"></div>
-      <div class="row d-flex flex-column m-3"><label for="Complications">Complicações:</label> <input type="text" id="Complications"></div>
-      <div class="row d-flex flex-column m-3"><label for="TherapeuticPlan">Plano Terapêutico</label> <input type="text" id="TherapeuticPlan"></div>
-      <div class="row d-flex flex-column m-3">
-        <div class="card m-0">
-          <div class="card__text-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</div>
-          <div class="card__author">Franklin José da Cunha Abraão</div>
-        </div>
-      </div>
-      <div class="row d-flex flex-column m-3">
-        <div class="card m-0">
-          <div class="card__text-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</div>
-          <div class="card__author">Franklin José da Cunha Abraão</div>
-        </div>
-      </div>
-      <div class="row d-flex flex-column m-3">
-        <div class="card m-0">
-          <div class="card__text-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</div>
-          <div class="card__author">Franklin José da Cunha Abraão</div>
-        </div>
-      </div>
-      <div class="row d-flex flex-column m-3">
-        <div class="card m-0">
-          <div class="card__text-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</div>
-          <div class="card__author">Franklin José da Cunha Abraão</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <router-view-stub name="default"></router-view-stub>
 </div>
 `;

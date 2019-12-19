@@ -1,23 +1,23 @@
-import { shallowMount, RouterLinkStub } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
+import VueRouter from 'vue-router'
 import UTIList from '@/components/UTIList'
 import utis from '@/components/__tests__/__mocks__/utis'
 
+const localVue = createLocalVue()
+localVue.use(VueRouter)
+
+const routes = [{ path: '/utis', component: UTIList }]
+const router = new VueRouter({
+  routes
+})
 
 describe('HospitalList.vue', () => {
   let wrapper
 
-  const $route = {
-    params: { hospitalId: 1 }
-  }
-
   beforeEach(() => {
     wrapper = shallowMount(UTIList, {
-      stubs: {
-        RouterLink: RouterLinkStub
-      },
-      mocks: {
-        $route
-      }
+      localVue,
+      router
     })
   })
 

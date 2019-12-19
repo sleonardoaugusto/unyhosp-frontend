@@ -1,6 +1,10 @@
-import { shallowMount, RouterLinkStub } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
+import VueRouter from 'vue-router'
 import BedCard from '@/components/BedCard'
 import beds from '@/components/__tests__/__mocks__/beds'
+
+const localVue = createLocalVue()
+localVue.use(VueRouter)
 
 describe('BedCard.vue', () => {
   let wrapper
@@ -8,10 +12,8 @@ describe('BedCard.vue', () => {
 
   beforeEach(() => {
     wrapper = shallowMount(BedCard, {
-      propsData,
-      stubs: {
-        RouterLink: RouterLinkStub
-      }
+      localVue,
+      propsData
     })
   })
 

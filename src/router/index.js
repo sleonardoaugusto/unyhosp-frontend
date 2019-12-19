@@ -24,9 +24,22 @@ const routes = [
     name: 'uti-beds',
     component: Beds
   }, {
-    path: '/attendance/:pacientId/',
+    path: '/attendance',
     name: 'attendance',
-    component: Attendance
+    component: Attendance,
+    children: [
+      {
+        path: 'register/:hospitalId',
+        name: 'attendanceRegister',
+        props: true,
+        component: () => import('@/components/attendance/Register')
+      }, {
+        path: 'edit/:attendanceId',
+        name: 'attendanceEdit',
+        props: true,
+        component: () => import('@/components/attendance/Edit')
+      }
+    ]
   }
 ]
 

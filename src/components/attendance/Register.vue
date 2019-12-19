@@ -7,7 +7,7 @@
     </div>
     <div class="col-md-6">
       <div class="row d-flex flex-column mb-3">
-        <label for="PacientName">Nome:</label>
+        <label for="PacientName">Paciente:</label>
         <input type="text" id="PacientName" v-model="pacient">
       </div>
     </div>

@@ -2,8 +2,8 @@
 $grey-smoke: #F5F5F5;
 $dark-grey: #555453;
 $yellow: #FFBE00;
-$blue: #1B76FF;
-$green: #4FCF91;
+$light-green: #4FCF91;
+$dark-green: #348E39;
 
 html {
   background-color: #FDFFFC;
@@ -50,12 +50,12 @@ html {
     color: $yellow;
   }
 
-  &-blue {
-    color: $blue;
+  &-light-green {
+    color: $light-green;
   }
 
-  &-green {
-    color: $green;
+  &-dark-green {
+    color: $dark-green
   }
 }
 

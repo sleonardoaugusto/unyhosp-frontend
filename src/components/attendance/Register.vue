@@ -8,19 +8,27 @@
     <div class="col-md-6">
       <div class="row d-flex flex-column mb-3">
         <label for="PacientName">Paciente:</label>
-        <input type="text" id="PacientName" v-model="pacient">
+        <input type="text" id="PacientName" :input="inputValue" @input="getPacients">
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import PacientService from '@/services/PacientService'
+
 export default {
   props: ['hospitalId'],
   name: 'Register',
   data: () => ({
-    pacient: ''
-  })
+    inputValue: '',
+    pacients: []
+  }),
+  methods: {
+    async getPacients() {
+      this.pacients = await PacientService.getPacients()
+    }
+  }
 }
 </script>
 

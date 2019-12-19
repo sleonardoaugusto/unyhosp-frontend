@@ -2,7 +2,7 @@
   <div class="d-flex flex-wrap justify-content-center align-items-center flex-column">
     <div class="col-md-6 mb-3">
       <div class="row">
-        <h2 class="type-h4 type-light-green">Editar atendimento</h2>
+        <h2 class="type-h4 type-light-green">Registrar atendimento</h2>
       </div>
     </div>
     <div class="col-md-6">

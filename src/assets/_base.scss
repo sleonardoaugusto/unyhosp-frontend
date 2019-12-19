@@ -1,14 +1,76 @@
 // Colors Variables
 $grey-smoke: #F5F5F5;
 $dark-grey: #555453;
+$yellow: #FFBE00;
+$blue: #1B76FF;
+$green: #4FCF91;
 
 html {
   background-color: #FDFFFC;
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Font sizing best practice reference
-2.5rem, 2rem, 1.75rem, 1.5rem, 1.25rem */
+.type {
+  &-h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
 
-/* Font weight availables reference
-400, 500, 600, 700 */
+  &-h2 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  &-h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+
+  &-h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  &-h6 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  &-h7 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  &-h8 {
+    font-size: .75rem;
+    font-weight: 700;
+  }
+
+  &-yellow {
+    color: $yellow;
+  }
+
+  &-blue {
+    color: $blue;
+  }
+
+  &-green {
+    color: $green;
+  }
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-75 {
+  width: 75% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.w-25 {
+  width: 25% !important;
+}

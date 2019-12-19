@@ -3,7 +3,7 @@
 .card {
   padding: 1rem;
   text-decoration: none;
-  min-height: 5rem;
+  min-height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,14 +15,21 @@
   flex-direction: column;
 
   &__name {
+    font-size: 1rem;
     font-weight: 500;
     color: $dark-grey;
     margin: .7rem;
   }
 
   &__text-content {
-    font-size: 13px;
+    font-size: .75rem;
     font-weight: 500;
+  }
+
+  &__action {
+    padding: .5rem;
+    font-weight: 600;
+    font-size: .7rem;
   }
 
   &__author {

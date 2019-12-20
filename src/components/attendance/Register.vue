@@ -11,6 +11,9 @@
         <input type="text" id="PacientName" v-model="inputValue" @input="searchPacients">
         <ul v-show="showDropdown" class="live-search__dropdown">
           <li class="live-search__item" v-for="(p, i) in pacients" :key="i" @click="setPacient(p)">{{ p.name }}</li>
+          <router-link tag="li" :to="{name: 'pacientRegister'}" class="live-search__item type-dark-green type-h7">Novo
+            Paciente +
+          </router-link>
         </ul>
       </div>
     </div>

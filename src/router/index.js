@@ -4,6 +4,7 @@ import Hospitals from '@/views/Hospitals'
 import UTIs from '@/views/UTIs'
 import Beds from '@/views/Beds'
 import Attendance from '@/views/Attendance'
+import Pacient from '@/views/Pacient'
 
 Vue.use(VueRouter)
 
@@ -40,6 +41,15 @@ const routes = [
         component: () => import('@/components/attendance/Edit')
       }
     ]
+  }, {
+    path: '/pacient',
+    name: 'pacient',
+    component: Pacient,
+    children: [{
+      path: 'register',
+      name: 'pacientRegister',
+      component: () => import ('@/components/pacient/Register')
+    }]
   }
 ]
 

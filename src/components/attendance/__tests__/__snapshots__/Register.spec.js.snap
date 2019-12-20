@@ -8,7 +8,11 @@ exports[`Register.vue component is rendering properly 1`] = `
     </div>
   </div>
   <div class="col-md-6">
-    <div class="row d-flex flex-column mb-3"><label for="PacientName">Paciente:</label> <input type="text" id="PacientName" input=""></div>
+    <div class="row d-flex flex-column mb-3"><label for="PacientName">Paciente:</label> <input type="text" id="PacientName">
+      <ul class="live-search__dropdown">
+        <li class="live-search__item">Paul Green</li>
+      </ul>
+    </div>
   </div>
 </div>
 `;

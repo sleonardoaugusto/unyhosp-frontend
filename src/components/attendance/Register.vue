@@ -8,7 +8,10 @@
     <div class="col-md-6">
       <div class="row d-flex flex-column mb-3">
         <label for="PacientName">Paciente:</label>
-        <input type="text" id="PacientName" :input="inputValue" @input="getPacients">
+        <input type="text" id="PacientName" v-model="inputValue" @input="getPacients">
+        <ul class="live-search__dropdown">
+          <li class="live-search__item" v-for="(p, i) in pacients" :key="i" @click="setPacient(p)">{{ p.name }}</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -26,7 +29,13 @@ export default {
   }),
   methods: {
     async getPacients() {
-      this.pacients = await PacientService.getPacients()
+      await PacientService.getPacients()
+        .then((res) => {
+          this.pacients = res.data
+        })
+    },
+    setPacient(value) {
+      this.inputValue = value.name
     }
   }
 }

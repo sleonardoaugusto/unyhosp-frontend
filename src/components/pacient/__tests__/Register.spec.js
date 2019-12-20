@@ -17,4 +17,11 @@ describe('Pacient/Register.vue', () => {
   it('component is rendering properly', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
+
+  it('click button must call registerPacient method', () => {
+    const registerPacient = jest.fn()
+    wrapper.setMethods({ registerPacient })
+    wrapper.find('.button').trigger('click')
+    expect(registerPacient).toHaveBeenCalled()
+  })
 })

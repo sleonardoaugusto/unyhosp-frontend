@@ -11,9 +11,9 @@ exports[`Register.vue component is rendering properly 1`] = `
     <div class="row d-flex flex-column mb-3"><label for="PacientName">Paciente:</label> <input type="text" id="PacientName">
       <ul class="live-search__dropdown" style="display: none;">
         <li class="live-search__item">Paul Green</li>
-        <router-link tag="li" to="[object Object]" class="live-search__item type-dark-green type-h7">Novo
+        <router-link-stub to="[object Object]" tag="li" event="click" class="live-search__item type-dark-green type-h7">Novo
           Paciente +
-        </router-link>
+        </router-link-stub>
       </ul>
     </div>
   </div>

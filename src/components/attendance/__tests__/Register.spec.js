@@ -1,11 +1,17 @@
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Register from '@/components/attendance/Register'
+import VueRouter from 'vue-router'
+
+const localVue = createLocalVue()
+localVue.use(VueRouter)
 
 describe('Register.vue', () => {
   let wrapper
 
   beforeEach(() => {
-    wrapper = shallowMount(Register)
+    wrapper = shallowMount(Register, {
+      localVue
+    })
   })
 
   it('component is rendering properly', () => {

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pacient/Register.vue component is rendering properly 1`] = `
+<div class="d-flex flex-wrap justify-content-center align-items-center flex-column">
+  <div class="col-md-6 mb-3">
+    <div class="row">
+      <h2 class="type-h4 type-light-green">Cadastrar Paciente</h2>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="row d-flex flex-column mb-3"><label for="PacientName">Paciente:</label> <input type="text" id="PacientName"></div>
+    <div class="row d-flex flex-column mb-3"><label for="DocumentId">CPF:</label> <input type="text" id="DocumentId"></div>
+    <div class="row d-flex flex-column mb-3"><label for="Email">Email:</label> <input type="text" id="Email"></div>
+    <div class="row d-flex flex-column mb-3"><label for="DateOfBirth">Data de Nascimento:</label> <input type="text" id="DateOfBirth"></div>
+  </div>
+  <div class="col-md-6">
+    <div class="row"><button class="button button-green">CADASTRAR</button></div>
+  </div>
+</div>
+`;

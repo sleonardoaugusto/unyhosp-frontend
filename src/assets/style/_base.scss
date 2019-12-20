@@ -5,6 +5,7 @@ $dark-grey: #555453;
 $yellow: #FFBE00;
 $light-green: #4FCF91;
 $dark-green: #348E39;
+$red: #CD0402;
 
 html {
   background-color: #FDFFFC;
@@ -60,20 +61,49 @@ html {
   }
 }
 
+.button {
+  cursor: pointer;
+  padding: .6rem;
+  border-radius: .3rem;
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: transparent;
+  color: $white;
+
+  &:hover {
+    opacity: .7;
+    transition: opacity .3s;
+  }
+
+  &-green {
+    background-color: $light-green;
+  }
+
+  &-red {
+    background-color: $red;
+  }
+}
 
 label {
+  font-size: .9rem;
   margin: .2rem 0;
   font-weight: 500;
-  color: $light-green;
+  color: $dark-grey;
 }
 
 input {
   padding: .3rem .5rem;
   border-radius: 5px;
-  border: 2px solid $dark-grey;
+  border: 2px solid $light-green;
   background-color: $white;
   font-family: 'Montserrat';
   color: $dark-grey;
   font-size: 1rem;
   font-weight: 400;
+
+  &:focus {
+    border-color: #7FDCAF;
+    outline-color: #7FDCAF;
+  }
 }

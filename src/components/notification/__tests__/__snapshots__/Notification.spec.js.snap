@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification renders component 1`] = `
+<div class="notification-bar">
+  <p class="notification-bar__message"><span class="notification-bar__close">x</span>
+    Problema de conexão: Network Error
+  </p>
+</div>
+`;

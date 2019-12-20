@@ -13,7 +13,7 @@ describe('Register.vue', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  it('should get pacients when interact with pacient field', () => {
+  it('should call getPacients method when interact with pacient field', () => {
     const getPacients = jest.fn()
     wrapper.setMethods({ getPacients })
     wrapper.find('input').trigger('input')

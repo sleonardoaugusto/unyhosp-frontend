@@ -35,7 +35,7 @@ export default {
     async searchPacients() {
       this.showDropdown = true
 
-      await PacientService.getPacients()
+      await PacientService.getByName(this.inputValue)
         .then((res) => {
           this.pacients = res.data
         })

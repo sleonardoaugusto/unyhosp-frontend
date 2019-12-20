@@ -1,11 +1,13 @@
 import apiClient from './config'
 
 export default {
-  getPacients() {
+  get() {
     return apiClient.get('/pacients/')
   },
-
-  postPacient(data) {
+  getByName(name) {
+    return apiClient.get(`/pacients/?name=${name}`)
+  },
+  post(data) {
     return apiClient.post('/pacients/', data)
   }
 }

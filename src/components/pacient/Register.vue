@@ -46,7 +46,7 @@ export default {
   }),
   methods: {
     registerPacient() {
-      PacientService.postPacient(this.data)
+      PacientService.post(this.data)
     }
   }
 }

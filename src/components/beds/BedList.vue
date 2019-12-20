@@ -6,7 +6,7 @@
 
 <script>
 import beds from '@/mocks/beds'
-import BedCard from '@/components/BedCard'
+import BedCard from '@/components/beds/BedCard'
 
 export default {
   name: 'BedList',

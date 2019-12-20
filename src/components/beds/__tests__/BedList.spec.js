@@ -1,8 +1,8 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import VueRouter from 'vue-router'
-import BedList from '@/components/BedList'
-import BedCard from '@/components/BedCard'
-import beds from '@/components/__tests__/__mocks__/beds'
+import BedList from '@/components/beds/BedList'
+import BedCard from '@/components/beds/BedCard'
+import beds from '@/components/beds/__tests__/__mocks__/beds'
 
 const localVue = createLocalVue()
 localVue.use(VueRouter)

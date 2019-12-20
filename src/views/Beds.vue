@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import BedList from '@/components/BedList'
+import BedList from '@/components/beds/BedList'
 
 export default {
   name: 'Bed',

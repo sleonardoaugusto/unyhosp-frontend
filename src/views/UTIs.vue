@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import UTIList from '@/components/UTIList'
+import UTIList from '@/components/UTIs/UTIList'
 
 export default {
   name: 'UTI',

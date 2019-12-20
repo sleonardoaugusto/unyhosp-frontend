@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import HospitalList from '@/components/HospitalList'
+import HospitalList from '@/components/hospitals/HospitalList'
 
 export default {
   name: 'home',

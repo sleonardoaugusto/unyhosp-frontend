@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import Hospitals from '@/views/Hospitals'
-import HospitalList from '@/components/HospitalList'
+import HospitalList from '@/components/hospitals/HospitalList'
 
 describe('Hospitals.vue', () => {
   let wrapper

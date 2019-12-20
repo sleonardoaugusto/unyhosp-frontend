@@ -1,22 +1,23 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import VueRouter from 'vue-router'
-import HospitalList from '@/components/HospitalList'
-import hospitals from '@/components/__tests__/__mocks__/hospitals'
+import BedCard from '@/components/beds/BedCard'
+import beds from '@/components/beds/__tests__/__mocks__/beds'
 
 const localVue = createLocalVue()
 localVue.use(VueRouter)
 
-describe('HospitalList.vue', () => {
+describe('BedCard.vue', () => {
   let wrapper
+  const propsData = { bed: beds.data[0] }
 
   beforeEach(() => {
-    wrapper = shallowMount(HospitalList, {
-      localVue
+    wrapper = shallowMount(BedCard, {
+      localVue,
+      propsData
     })
   })
 
   it('component is rendering properly', () => {
-    wrapper.setData({ hospitals: hospitals.data })
     expect(wrapper.html()).toMatchSnapshot()
   })
 })

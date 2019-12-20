@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import Beds from '@/views/Beds'
-import BedList from '@/components/BedList'
+import BedList from '@/components/beds/BedList'
 
 describe('Beds.vue', () => {
   let wrapper

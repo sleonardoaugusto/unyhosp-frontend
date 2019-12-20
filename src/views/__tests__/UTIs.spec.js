@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import UTIs from '@/views/UTIs'
-import BedList from '@/components/BedList'
+import UTIList from '@/components/UTIs/UTIList'
 
 describe('UTIs.vue', () => {
   let wrapper
@@ -12,6 +12,6 @@ describe('UTIs.vue', () => {
   })
 
   it('renders child component', () => {
-    expect(wrapper.find(BedList)).toBeTruthy()
+    expect(wrapper.find(UTIList)).toBeTruthy()
   })
 })

@@ -1,10 +1,7 @@
 <template>
   <div class="notification-bar">
     <p class="notification-bar__message">
-      <!--      <span class="notification-bar__close" @click="close">x</span>-->
-      <BaseIcon name="users">
-        <span slot="description"></span>
-      </BaseIcon>
+      <BaseIcon class="c-pointer" @click.native="close" name="x-circle"/>
       {{ notification.message }}
     </p>
   </div>
@@ -33,5 +30,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .c-pointer {
+    cursor: pointer;
+  }
 </style>

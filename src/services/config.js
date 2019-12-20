@@ -12,7 +12,7 @@ const apiClient = axios.create({
 apiClient.interceptors.response.use((response) => {
   // console.log(response)
 }, error => {
-  const message = 'Houve um problema com o servidor, favor contatar seu administrador'
+  const message = 'Houve um problema na comunicação com o servidor, contate seu Administrador'
   index.dispatch('notification/add', { message: message }, { root: true })
 })
 

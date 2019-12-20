@@ -13,11 +13,11 @@ describe('Register.vue', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  it('should call getPacients method when interact with pacient field', () => {
-    const getPacients = jest.fn()
-    wrapper.setMethods({ getPacients })
+  it('should call searchPacients method when interact with pacient field', () => {
+    const searchPacients = jest.fn()
+    wrapper.setMethods({ searchPacients })
     wrapper.find('input').trigger('input')
-    expect(getPacients).toHaveBeenCalled()
+    expect(searchPacients).toHaveBeenCalled()
   })
 
   it('call setData method when interact with live search items', () => {

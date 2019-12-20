@@ -28,19 +28,17 @@ const routes = [
     path: '/attendance',
     name: 'attendance',
     component: Attendance,
-    children: [
-      {
-        path: 'register/:hospitalId',
-        name: 'attendanceRegister',
-        props: true,
-        component: () => import('@/components/attendance/Register')
-      }, {
-        path: 'edit/:attendanceId',
-        name: 'attendanceEdit',
-        props: true,
-        component: () => import('@/components/attendance/Edit')
-      }
-    ]
+    children: [{
+      path: 'register/:hospitalId',
+      name: 'attendanceRegister',
+      props: true,
+      component: () => import('@/components/attendance/Register')
+    }, {
+      path: 'edit/:attendanceId',
+      name: 'attendanceEdit',
+      props: true,
+      component: () => import('@/components/attendance/Edit')
+    }]
   }, {
     path: '/pacient',
     name: 'pacient',

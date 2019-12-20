@@ -1,4 +1,5 @@
 // Colors Variables
+$white: #FDFFFC;
 $grey-smoke: #F5F5F5;
 $dark-grey: #555453;
 $yellow: #FFBE00;
@@ -59,21 +60,6 @@ html {
   }
 }
 
-.w-100 {
-  width: 100% !important;
-}
-
-.w-75 {
-  width: 75% !important;
-}
-
-.w-50 {
-  width: 50% !important;
-}
-
-.w-25 {
-  width: 25% !important;
-}
 
 label {
   margin: .2rem 0;
@@ -82,13 +68,12 @@ label {
 }
 
 input {
-  &[type="text"] {
-    padding: .3rem .5rem;
-    border-radius: 5px;
-    border: 2px solid $dark-grey;
-    background-color: #FDFFFC;
-    font-family: 'Montserrat';
-    font-size: 14px;
-    font-weight: 400;
-  }
+  padding: .3rem .5rem;
+  border-radius: 5px;
+  border: 2px solid $dark-grey;
+  background-color: $white;
+  font-family: 'Montserrat';
+  color: $dark-grey;
+  font-size: 1rem;
+  font-weight: 400;
 }

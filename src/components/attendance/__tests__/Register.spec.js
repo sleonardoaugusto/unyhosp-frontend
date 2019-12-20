@@ -20,6 +20,12 @@ describe('Register.vue', () => {
     expect(searchPacients).toHaveBeenCalled()
   })
 
+  it('dropdown should appear at searchPacients method trigger', () => {
+    expect(wrapper.find('.live-search__dropdown').isVisible()).toBeFalsy()
+    wrapper.vm.searchPacients()
+    expect(wrapper.find('.live-search__dropdown').isVisible()).toBeTruthy()
+  })
+
   it('call setData method when interact with live search items', () => {
     const setPacient = jest.fn()
     wrapper.setMethods({ setPacient })

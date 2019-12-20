@@ -1,4 +1,5 @@
 import axios from 'axios'
+import index from '@/store'
 
 const apiClient = axios.create({
   baseURL: 'http://localhost:8000',
@@ -11,7 +12,8 @@ const apiClient = axios.create({
 apiClient.interceptors.response.use((response) => {
   // console.log(response)
 }, error => {
-  // console.log(error.response)
+  const message = 'Houve um problema com o servidor, favor contatar seu administrador'
+  index.dispatch('notification/add', { message: message }, { root: true })
 })
 
 export default apiClient

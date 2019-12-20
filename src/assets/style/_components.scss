@@ -63,7 +63,7 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  padding: 0 2rem 2rem 0;
+  padding: 0 .3rem .3rem 0;
 
   .notification-bar {
     display: flex;
@@ -75,18 +75,21 @@
     background-color: $light-green;
 
     &__message {
+      display: flex;
+      align-items: center;
+      font-size: .8rem;
       margin: 0;
       padding: 0 5px 0 5px;
       color: $white;
-      font-weight: 500;
+      font-weight: 400;
     }
 
     &__close {
       cursor: pointer;
-      padding-right: 5px;
-      font-size: 1.2rem;
+      padding-right: .3rem;
+      font-size: 1rem;
       font-weight: 600;
-      color: #2c3e50;
+      color: $white;
     }
   }
 }

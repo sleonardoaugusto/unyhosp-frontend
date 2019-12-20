@@ -4,7 +4,6 @@ $grey-smoke: #F5F5F5;
 $dark-grey: #555453;
 $yellow: #FFBE00;
 $light-green: #4FCF91;
-$dark-green: #348E39;
 $red: #fd3937;
 
 html {
@@ -56,9 +55,6 @@ html {
     color: $light-green;
   }
 
-  &-dark-green {
-    color: $dark-green
-  }
 }
 
 .button {

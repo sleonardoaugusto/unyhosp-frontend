@@ -24,7 +24,8 @@
       </div>
       <div class="form-group" :class="{ 'form-group--error': $v.data.date_of_birth.$error }">
         <label class="form__label" for="DateOfBirth">Data de Nascimento:</label>
-        <input class="form__input" type="tel" id="DateOfBirth" v-mask="'##/##/####'" v-model.trim="data.date_of_birth">
+        <input class="form__input" type="tel" id="DateOfBirth" v-mask="'##/##/####'"
+               v-model.trim="$v.data.date_of_birth.$model">
         <div v-if="!$v.data.date_of_birth.required" class="error--message">Campo obrigatório</div>
       </div>
     </div>

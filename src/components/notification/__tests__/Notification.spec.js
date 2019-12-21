@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import Notification from '@/components/notification/Notification'
+import BaseIcon from '@/components/common/BaseIcon'
 
 describe('Notification', () => {
   let wrapper
@@ -24,7 +25,7 @@ describe('Notification', () => {
   })
 
   it('span click must trigger close method', () => {
-    wrapper.find('span').trigger('click')
+    wrapper.find(BaseIcon).trigger('click')
     expect(close).toHaveBeenCalled()
   })
 })

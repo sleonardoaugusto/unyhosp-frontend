@@ -2,7 +2,8 @@
 
 exports[`Notification renders component 1`] = `
 <div class="notification-bar">
-  <p class="notification-bar__message"><span class="notification-bar__close">x</span>
+  <p class="notification-bar__message">
+    <baseicon-stub name="x-circle" width="16" height="16" class="c-pointer"></baseicon-stub>
     Problema de conexão: Network Error
   </p>
 </div>

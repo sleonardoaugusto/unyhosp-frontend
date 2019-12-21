@@ -120,7 +120,27 @@ html {
       transition: .4s;
     }
   }
+
+  &--error .form__label {
+    color: $red !important;
+  }
+
+  &--error input,
+  &--error textarea,
+  &--error input:focus,
+  &--error input:hover {
+    border-color: $soft-red !important;
+  }
+
+  .error--message {
+    color: $soft-red;
+    font-size: 0.75rem;
+    line-height: 1;
+    margin: .3rem 0 .3rem .7rem;
+  }
+
 }
+
 
 a {
   text-decoration: none;

@@ -15,10 +15,10 @@
         <the-mask class="form__input" type="text" id="DocumentId" mask="###.###.###-##"
                   v-model.trim="data.document_id"/>
       </div>
-      <div class="form-group">
+      <div class="form-group" :class="{ 'form-group--error': !$v.data.email.email }">
         <label class="form__label" for="Email">Email:</label>
         <input class="form__input" type="text" id="Email" v-model.trim="$v.data.email.$model">
-        <div v-if="!$v.data.email.email" class="error">Deu ruim</div>
+        <div v-if="!$v.data.email.email" class="error--message">Email inválido</div>
       </div>
       <div class="form-group">
         <label class="form__label" for="DateOfBirth">Data de Nascimento:</label>

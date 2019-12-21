@@ -6,9 +6,10 @@
       </div>
     </div>
     <div class="col-md-6">
-      <div class="form-group">
-        <label class="form__label" for="PacientName">Paciente:</label>
-        <input class="form__input" type="text" id="PacientName" v-model.trim="data.name">
+      <div class="form-group" :class="{ 'form-group--error': !$v.data.name.required }">
+        <label class="form__label" for="PacientName">Nome:</label>
+        <input class="form__input" type="text" id="PacientName" v-model.trim="$v.data.name.$model">
+        <div v-if="!$v.data.name.required" class="error--message">Campo obrigatório</div>
       </div>
       <div class="form-group">
         <label class="form__label" for="DocumentId">CPF:</label>
@@ -35,7 +36,7 @@
 
 <script>
 import PacientService from '@/services/PacientService'
-import { required, email } from 'vuelidate/lib/validators'
+import { required, email, minLength } from 'vuelidate/lib/validators'
 
 export default {
   name: 'Register',
@@ -49,6 +50,7 @@ export default {
   }),
   validations: {
     data: {
+      name: { required },
       email: { required, email }
     }
   },

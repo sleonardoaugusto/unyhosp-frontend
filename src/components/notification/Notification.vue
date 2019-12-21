@@ -21,6 +21,15 @@ export default {
       required: true
     }
   },
+  data: () => ({
+    timeout: null
+  }),
+  mounted() {
+    this.timeout = setTimeout(() => this.$emit('close-notification'), 5000)
+  },
+  beforeDestroy() {
+    clearTimeout(this.timeout)
+  },
   methods: {
     close() {
       this.$emit('close-notification')

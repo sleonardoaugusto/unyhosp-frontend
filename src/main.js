@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import VueTheMask from 'vue-the-mask'
-import Vuelidate from 'vuelidate/src'
+import Vuelidate from 'vuelidate'
 
 Vue.config.productionTip = false
 Vue.use(VueTheMask)

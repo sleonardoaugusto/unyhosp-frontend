@@ -6,27 +6,28 @@
       </div>
     </div>
     <div class="col-md-6">
-      <div class="row d-flex flex-column mb-3">
-        <label for="PacientName">Paciente:</label>
-        <input type="text" id="PacientName" v-model.trim="data.name">
+      <div class="form-group">
+        <label class="form__label" for="PacientName">Paciente:</label>
+        <input class="form__input" type="text" id="PacientName" v-model.trim="data.name">
       </div>
-      <div class="row d-flex flex-column mb-3">
-        <label for="DocumentId">CPF:</label>
-        <the-mask type="text" id="DocumentId" mask="###.###.###-##" v-model.trim="data.document_id"/>
+      <div class="form-group">
+        <label class="form__label" for="DocumentId">CPF:</label>
+        <the-mask class="form__input" type="text" id="DocumentId" mask="###.###.###-##"
+                  v-model.trim="data.document_id"/>
       </div>
-      <div class="row d-flex flex-column mb-3">
-        <label for="Email">Email:</label>
-        <input type="text" id="Email" v-model.trim="$v.data.email.$model">
-        <span v-if="!$v.data.email.email" class="error">Deu ruim</span>
+      <div class="form-group">
+        <label class="form__label" for="Email">Email:</label>
+        <input class="form__input" type="text" id="Email" v-model.trim="$v.data.email.$model">
+        <div v-if="!$v.data.email.email" class="error">Deu ruim</div>
       </div>
-      <div class="row d-flex flex-column mb-3">
-        <label for="DateOfBirth">Data de Nascimento:</label>
-        <input type="tel" id="DateOfBirth" v-mask="'##/##/####'" v-model.trim="data.date_of_birth">
+      <div class="form-group">
+        <label class="form__label" for="DateOfBirth">Data de Nascimento:</label>
+        <input class="form__input" type="tel" id="DateOfBirth" v-mask="'##/##/####'" v-model.trim="data.date_of_birth">
       </div>
     </div>
     <div class="col-md-6">
       <div class="row">
-        <button class="button button-green" @click="registerPacient">CADASTRAR</button>
+        <button class="button button-grey" @click="registerPacient">CADASTRAR</button>
       </div>
     </div>
   </div>

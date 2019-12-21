@@ -1,12 +1,16 @@
 // Colors Variables
 $white: #FDFFFC;
-$grey-smoke: #F5F5F5;
 $yellow: #FFBE00;
+$dark-blue: #374853;
 $blue-smoke: #4b6372;
-$red: #fd3937;
+$grey-smoke: #a8a8a8;
+$soft-grey: #cfcfcf;
+$light-grey: #E8E8E8;
+$red: #f04124;
+$soft-red: #f79483;
 
 html {
-  background-color: #FDFFFC;
+  background-color: $white;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -71,7 +75,7 @@ html {
     transition: opacity .3s;
   }
 
-  &-green {
+  &-grey {
     background-color: $blue-smoke;
   }
 
@@ -80,26 +84,41 @@ html {
   }
 }
 
-label {
-  font-size: .9rem;
-  margin: .2rem 0;
-  font-weight: 500;
-  color: $blue-smoke;
-}
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  flex-direction: column;
+  margin-bottom: 1rem;
 
-input {
-  padding: .3rem .5rem;
-  border-radius: 5px;
-  border: 1px solid $blue-smoke;
-  background-color: $white;
-  font-family: 'Montserrat';
-  color: $blue-smoke;
-  font-size: 1rem;
-  font-weight: 400;
+  .form__label {
+    font-size: .9rem;
+    margin: .3rem 0 .3rem .7rem;
+    font-weight: 500;
+    color: $blue-smoke;
+  }
 
-  &:focus {
-    border-color: #7FDCAF;
-    outline-color: #7FDCAF;
+  .form__input {
+    padding: .6rem .6rem;
+    border: 1px solid $light-grey;
+    border-radius: 4px;
+    background-color: $white;
+    color: $dark-blue;
+    font-family: 'Montserrat';
+    font-size: .9rem;
+    font-weight: 400;
+    outline: none;
+
+    &:hover {
+      border-color: $soft-grey;
+      transition: .4s;
+    }
+
+    &:focus {
+      border-color: $grey-smoke;
+      transition: .4s;
+    }
   }
 }
 

@@ -1,9 +1,9 @@
 <template>
   <div class="notification-container">
     <Notification
-      v-for="(n, i) in notifications"
+      v-for="n in notifications"
       :notification="n"
-      :key="i"
+      :key="n.id"
       @close-notification="close(n)"
     />
   </div>

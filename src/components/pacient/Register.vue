@@ -2,7 +2,7 @@
   <div class="d-flex flex-wrap justify-content-center align-items-center flex-column">
     <div class="col-md-6 mb-3">
       <div class="row">
-        <h2 class="type-h4 type-light-green">Cadastrar Paciente</h2>
+        <h2 class="type-h4 type-blue-smoke">Cadastrar Paciente</h2>
       </div>
     </div>
     <div class="col-md-6">
@@ -12,15 +12,16 @@
       </div>
       <div class="row d-flex flex-column mb-3">
         <label for="DocumentId">CPF:</label>
-        <input type="text" id="DocumentId" v-model.trim="data.document_id">
+        <the-mask type="text" id="DocumentId" mask="###.###.###-##" v-model.trim="data.document_id"/>
       </div>
       <div class="row d-flex flex-column mb-3">
         <label for="Email">Email:</label>
-        <input type="text" id="Email" v-model.trim="data.email">
+        <input type="text" id="Email" v-model.trim="$v.data.email.$model">
+        <span v-if="!$v.data.email.email" class="error">Deu ruim</span>
       </div>
       <div class="row d-flex flex-column mb-3">
         <label for="DateOfBirth">Data de Nascimento:</label>
-        <input type="text" id="DateOfBirth" v-model.trim="data.date_of_birth">
+        <input type="tel" id="DateOfBirth" v-mask="'##/##/####'" v-model.trim="data.date_of_birth">
       </div>
     </div>
     <div class="col-md-6">
@@ -33,6 +34,7 @@
 
 <script>
 import PacientService from '@/services/PacientService'
+import { required, email } from 'vuelidate/lib/validators'
 
 export default {
   name: 'Register',
@@ -44,6 +46,11 @@ export default {
       date_of_birth: ''
     }
   }),
+  validations: {
+    data: {
+      email: { required, email }
+    }
+  },
   methods: {
     registerPacient() {
       PacientService.post(this.data)

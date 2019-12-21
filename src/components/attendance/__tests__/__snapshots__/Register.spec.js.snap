@@ -4,14 +4,14 @@ exports[`Register.vue component is rendering properly 1`] = `
 <div class="d-flex flex-wrap justify-content-center align-items-center flex-column">
   <div class="col-md-6 mb-3">
     <div class="row">
-      <h2 class="type-h4 type-light-green">Registrar atendimento</h2>
+      <h2 class="type-h4 type-blue-smoke">Registrar atendimento</h2>
     </div>
   </div>
   <div class="col-md-6">
     <div class="row d-flex flex-column mb-3"><label for="PacientName">Paciente:</label> <input type="text" id="PacientName">
       <ul class="live-search__dropdown" style="display: none;">
         <li class="live-search__item">Paul Green</li>
-        <router-link-stub to="[object Object]" tag="li" event="click" class="live-search__item type-light-green type-h8">Novo
+        <router-link-stub to="[object Object]" tag="li" event="click" class="live-search__item type-blue-smoke type-h8">Novo
           Paciente +
         </router-link-stub>
       </ul>

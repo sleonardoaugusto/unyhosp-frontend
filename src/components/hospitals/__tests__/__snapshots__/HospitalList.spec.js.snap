@@ -7,7 +7,7 @@ exports[`HospitalList.vue component is rendering properly 1`] = `
       <p class="card__name">São Joaquim</p>
     </div>
     <div class="row justify-content-between w-100">
-      <router-link-stub to="[object Object]" tag="a" event="click" class="card__action type-light-green">Novo atendimento
+      <router-link-stub to="[object Object]" tag="a" event="click" class="card__action type-blue-smoke">Novo atendimento
       </router-link-stub> <span class="card__action type-yellow">Editar</span>
     </div>
   </router-link-stub>
@@ -16,7 +16,7 @@ exports[`HospitalList.vue component is rendering properly 1`] = `
       <p class="card__name">Albert Einstein</p>
     </div>
     <div class="row justify-content-between w-100">
-      <router-link-stub to="[object Object]" tag="a" event="click" class="card__action type-light-green">Novo atendimento
+      <router-link-stub to="[object Object]" tag="a" event="click" class="card__action type-blue-smoke">Novo atendimento
       </router-link-stub> <span class="card__action type-yellow">Editar</span>
     </div>
   </router-link-stub>
@@ -25,7 +25,7 @@ exports[`HospitalList.vue component is rendering properly 1`] = `
       <p class="card__name">São Pedro</p>
     </div>
     <div class="row justify-content-between w-100">
-      <router-link-stub to="[object Object]" tag="a" event="click" class="card__action type-light-green">Novo atendimento
+      <router-link-stub to="[object Object]" tag="a" event="click" class="card__action type-blue-smoke">Novo atendimento
       </router-link-stub> <span class="card__action type-yellow">Editar</span>
     </div>
   </router-link-stub>

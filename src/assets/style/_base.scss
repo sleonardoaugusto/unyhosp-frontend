@@ -1,9 +1,8 @@
 // Colors Variables
 $white: #FDFFFC;
 $grey-smoke: #F5F5F5;
-$dark-grey: #555453;
 $yellow: #FFBE00;
-$light-green: #4FCF91;
+$blue-smoke: #4b6372;
 $red: #fd3937;
 
 html {
@@ -51,8 +50,8 @@ html {
     color: $yellow;
   }
 
-  &-light-green {
-    color: $light-green;
+  &-blue-smoke {
+    color: $blue-smoke;
   }
 
 }
@@ -73,7 +72,7 @@ html {
   }
 
   &-green {
-    background-color: $light-green;
+    background-color: $blue-smoke;
   }
 
   &-red {
@@ -85,16 +84,16 @@ label {
   font-size: .9rem;
   margin: .2rem 0;
   font-weight: 500;
-  color: $dark-grey;
+  color: $blue-smoke;
 }
 
 input {
   padding: .3rem .5rem;
   border-radius: 5px;
-  border: 2px solid $light-green;
+  border: 1px solid $blue-smoke;
   background-color: $white;
   font-family: 'Montserrat';
-  color: $dark-grey;
+  color: $blue-smoke;
   font-size: 1rem;
   font-weight: 400;
 

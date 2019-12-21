@@ -1,7 +1,7 @@
 <template>
   <div class="col-md-12">
     <div class="row d-flex justify-content-center">
-      <h1 class="type-h2 type-light-green">Atendimento</h1>
+      <h1 class="type-h2 type-blue-smoke">Atendimento</h1>
     </div>
     <router-view/>
   </div>

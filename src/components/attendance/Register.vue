@@ -6,9 +6,9 @@
       </div>
     </div>
     <div class="col-md-6">
-      <div class="row d-flex flex-column mb-3">
-        <label for="PacientName">Paciente:</label>
-        <input type="text" id="PacientName" v-model="inputValue" @input="searchPacients">
+      <div class="form-group">
+        <label class="form__label" for="PacientName">Paciente:</label>
+        <input class="form__input" type="text" id="PacientName" v-model="inputValue" @input="searchPacients">
         <ul v-show="showDropdown" class="live-search__dropdown">
           <li class="live-search__item" v-for="(p, i) in pacients" :key="i" @click="setPacient(p)">{{ p.name }}</li>
           <router-link tag="li" :to="{name: 'pacientRegister'}" class="live-search__item type-blue-smoke type-h8">Novo

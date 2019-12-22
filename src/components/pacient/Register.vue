@@ -11,8 +11,8 @@
       </div>
       <div class="form-group" :class="{ 'form-group--error': $v.data.document_id.$error }">
         <label class="form__label" for="DocumentId">CPF:</label>
-        <the-mask class="form__input" type="text" id="DocumentId" mask="###.###.###-##"
-                  v-model.trim.lazy="$v.data.document_id.$model"/>
+        <input class="form__input" type="text" id="DocumentId" v-mask="'###.###.###-##'"
+               v-model.trim.lazy="$v.data.document_id.$model">
         <div v-if="!$v.data.document_id.required" class="error--message">Campo obrigatório</div>
         <div v-if="!$v.data.document_id.minLength" class="error--message">CPF inválido</div>
       </div>

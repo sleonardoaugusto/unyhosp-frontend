@@ -9,8 +9,7 @@ exports[`Pacient/Register.vue component is rendering properly 1`] = `
     <div class="form-group"><label for="PacientName" class="form__label">Nome:</label> <input type="text" id="PacientName" class="form__input">
       <div class="error--message">Campo obrigatório</div>
     </div>
-    <div class="form-group"><label for="DocumentId" class="form__label">CPF:</label>
-      <the-mask-stub value="" mask="###.###.###-##" tokens="[object Object]" type="text" id="DocumentId" class="form__input"></the-mask-stub>
+    <div class="form-group"><label for="DocumentId" class="form__label">CPF:</label> <input type="text" id="DocumentId" class="form__input">
       <div class="error--message">Campo obrigatório</div>
       <!---->
     </div>

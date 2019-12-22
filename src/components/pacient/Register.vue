@@ -5,7 +5,7 @@
         <h2 class="type-h4 type-blue-smoke">Cadastrar Paciente</h2>
       </div>
     </div>
-    <div class="col-md-6">
+    <form @submit.prevent="submit" class="col-md-6">
       <div class="form-group" :class="{ 'form-group--error': $v.data.name.$error }">
         <label class="form__label" for="PacientName">Nome:</label>
         <input class="form__input" type="text" id="PacientName" v-model.trim.lazy="$v.data.name.$model">
@@ -30,12 +30,8 @@
                v-model.trim.lazy="$v.data.date_of_birth.$model">
         <div v-if="!$v.data.date_of_birth.required" class="error--message">Campo obrigatório</div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="row">
-        <button class="button button-grey" @click="registerPacient">CADASTRAR</button>
-      </div>
-    </div>
+      <button class="button button-grey" type="submit">CADASTRAR</button>
+    </form>
   </div>
 </template>
 
@@ -51,7 +47,8 @@ export default {
       document_id: '',
       email: '',
       date_of_birth: ''
-    }
+    },
+    submitStatus: null
   }),
   validations: {
     data: {
@@ -62,8 +59,19 @@ export default {
     }
   },
   methods: {
-    registerPacient() {
-      PacientService.post(this.data)
+    submit() {
+      console.log('submit!')
+      this.$v.$touch()
+      if (this.$v.$invalid) {
+        this.submitStatus = 'ERROR'
+      } else {
+        // do your submit logic here
+        this.submitStatus = 'PENDING'
+        setTimeout(() => {
+          this.submitStatus = 'OK'
+          PacientService.post(this.data)
+        }, 500)
+      }
     }
   }
 }

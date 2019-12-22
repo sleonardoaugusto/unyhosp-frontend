@@ -23,9 +23,9 @@ describe('Pacient/Register.vue', () => {
   })
 
   it('click button must call registerPacient method', () => {
-    const registerPacient = jest.fn()
-    wrapper.setMethods({ registerPacient })
-    wrapper.find('.button').trigger('click')
-    expect(registerPacient).toHaveBeenCalled()
+    const submit = jest.fn()
+    wrapper.setMethods({ submit })
+    wrapper.find('form').trigger('submit')
+    expect(submit).toHaveBeenCalled()
   })
 })

@@ -1,9 +1,7 @@
 <template>
   <div class="d-flex flex-wrap justify-content-center align-items-center flex-column">
     <div class="col-md-6 mb-3">
-      <div class="row">
-        <h2 class="type-h4 type-blue-smoke">Cadastrar Paciente</h2>
-      </div>
+      <h2 class="type-h4 type-blue-smoke">Cadastrar Paciente</h2>
     </div>
     <form @submit.prevent="submit" class="col-md-6">
       <div class="form-group" :class="{ 'form-group--error': $v.data.name.$error }">

@@ -68,7 +68,7 @@ export default {
         this.submitStatus = 'OK'
         PacientService.post(this.data)
           .then(() => {
-            const payload = { message: 'Operação realizada com sucesso!', type: 'success' }
+            const payload = { message: 'Cadastro realizado!', type: 'success' }
             this.add(payload)
           })
 

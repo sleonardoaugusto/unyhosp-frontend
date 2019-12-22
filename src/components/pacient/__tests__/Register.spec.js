@@ -28,4 +28,16 @@ describe('Pacient/Register.vue', () => {
     wrapper.find('form').trigger('submit')
     expect(submit).toHaveBeenCalled()
   })
+
+  it('PacientService post method should be called', () => {
+    const PacientService = { post: jest.fn() }
+    const submit = jest.fn(PacientService.post)
+    wrapper.setMethods({ submit })
+    wrapper.find('#PacientName').setValue('Abraão Brickman')
+    wrapper.find('#DocumentId').setValue('45009877899')
+    wrapper.find('#Email').setValue('abraao.brickman@gmail.com')
+    wrapper.find('#DateOfBirth').setValue('06/08/1995')
+    wrapper.find('form').trigger('submit')
+    expect(PacientService.post).toHaveBeenCalled()
+  })
 })

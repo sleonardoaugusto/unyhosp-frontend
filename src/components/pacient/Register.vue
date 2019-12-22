@@ -8,24 +8,26 @@
     <div class="col-md-6">
       <div class="form-group" :class="{ 'form-group--error': $v.data.name.$error }">
         <label class="form__label" for="PacientName">Nome:</label>
-        <input class="form__input" type="text" id="PacientName" v-model.trim="$v.data.name.$model">
+        <input class="form__input" type="text" id="PacientName" v-model.trim.lazy="$v.data.name.$model">
         <div v-if="!$v.data.name.required" class="error--message">Campo obrigatório</div>
       </div>
-      <div class="form-group">
+      <div class="form-group" :class="{ 'form-group--error': $v.data.document_id.$error }">
         <label class="form__label" for="DocumentId">CPF:</label>
         <the-mask class="form__input" type="text" id="DocumentId" mask="###.###.###-##"
-                  v-model.trim="data.document_id"/>
+                  v-model.trim.lazy="$v.data.document_id.$model"/>
+        <div v-if="!$v.data.document_id.required" class="error--message">Campo obrigatório</div>
+        <div v-if="!$v.data.document_id.minLength" class="error--message">CPF inválido</div>
       </div>
       <div class="form-group" :class="{ 'form-group--error': $v.data.email.$error }">
         <label class="form__label" for="Email">Email:</label>
-        <input class="form__input" type="text" id="Email" v-model.trim="$v.data.email.$model">
+        <input class="form__input" type="text" id="Email" v-model.trim.lazy="$v.data.email.$model">
         <div v-if="!$v.data.email.required" class="error--message">Campo obrigatório</div>
         <div v-if="!$v.data.email.email" class="error--message">Email inválido</div>
       </div>
       <div class="form-group" :class="{ 'form-group--error': $v.data.date_of_birth.$error }">
         <label class="form__label" for="DateOfBirth">Data de Nascimento:</label>
         <input class="form__input" type="tel" id="DateOfBirth" v-mask="'##/##/####'"
-               v-model.trim="$v.data.date_of_birth.$model">
+               v-model.trim.lazy="$v.data.date_of_birth.$model">
         <div v-if="!$v.data.date_of_birth.required" class="error--message">Campo obrigatório</div>
       </div>
     </div>
@@ -55,6 +57,7 @@ export default {
     data: {
       name: { required },
       email: { required, email },
+      document_id: { required, minLength: minLength(11) },
       date_of_birth: { required }
     }
   },

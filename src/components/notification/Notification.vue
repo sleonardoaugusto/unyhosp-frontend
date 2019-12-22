@@ -1,5 +1,5 @@
 <template>
-  <div class="notification-bar">
+  <div class="notification-bar" :class="notification.type">
     <p class="notification-bar__message">
       <BaseIcon class="c-pointer" @click.native="close" name="x-circle"/>
       {{ notification.message }}
@@ -39,7 +39,5 @@ export default {
 </script>
 
 <style scoped>
-  .c-pointer {
-    cursor: pointer;
-  }
+
 </style>

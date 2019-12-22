@@ -35,6 +35,7 @@
 
 <script>
 import PacientService from '@/services/PacientService'
+import { mapActions } from 'vuex'
 import { required, email, minLength } from 'vuelidate/lib/validators'
 
 export default {
@@ -64,12 +65,18 @@ export default {
       } else {
         // do your submit logic here
         this.submitStatus = 'PENDING'
-        setTimeout(() => {
-          this.submitStatus = 'OK'
-          PacientService.post(this.data)
-        }, 500)
+        this.submitStatus = 'OK'
+        PacientService.post(this.data)
+          .then(() => {
+            const payload = { message: 'Operação realizada com sucesso!', type: 'success' }
+            this.add(payload)
+          })
+
       }
-    }
+    },
+    ...mapActions({
+      add: 'notification/add'
+    })
   }
 }
 </script>

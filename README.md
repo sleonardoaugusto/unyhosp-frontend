@@ -1,5 +1,5 @@
 # unyhosp-frontend
-[![Build Status](https://travis-ci.com/sleonardoaugusto/unyhosp-frontend.svg?branch=master)](https://travis-ci.com/sleonardoaugusto/unyhosp-frontend)
+[![Build Status](https://travis-ci.org/sleonardoaugusto/unyhosp-frontend.svg?branch=master)](https://travis-ci.org/sleonardoaugusto/unyhosp-frontend)
 
 ## Project setup
 ```

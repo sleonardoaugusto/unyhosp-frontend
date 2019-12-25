@@ -45,4 +45,11 @@ describe('Register.vue', () => {
     wrapper.vm.setPacient(data)
     expect(wrapper.vm.inputValue).toBe(data.name)
   })
+
+  it('submit method should be called at submit trigger', () => {
+    const submit = jest.fn()
+    wrapper.setMethods({ submit })
+    wrapper.find('form').trigger('submit')
+    expect(submit).toHaveBeenCalled()
+  })
 })

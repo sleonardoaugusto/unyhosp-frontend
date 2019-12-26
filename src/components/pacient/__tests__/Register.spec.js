@@ -50,14 +50,14 @@ describe('Register.vue', () => {
   it('PacientService post method should NOT be called on submit if data is INVALID', () => {
     wrapper.setData({ pacient: pacient.invalidData })
     const serviceSpy = jest.spyOn(PacientService, 'post')
-    wrapper.vm.submit()
+    wrapper.find('form').trigger('submit')
     expect(serviceSpy).toBeCalledTimes(0)
   })
 
   it('PacientService post method SHOULD be called on submit if data is VALID', () => {
     wrapper.setData({ pacient: pacient.validData })
     const serviceSpy = jest.spyOn(PacientService, 'post')
-    wrapper.vm.submit()
+    wrapper.find('form').trigger('submit')
     expect(serviceSpy).toHaveBeenCalledWith(pacient.validData)
   })
 })

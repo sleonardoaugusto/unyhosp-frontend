@@ -65,7 +65,7 @@ describe('Pacient/Register.vue', () => {
     expect(serviceSpy).toBeCalledTimes(0)
   })
 
-  it('PacientService post method should NOT be called on submit if form is VALID', () => {
+  it('PacientService post method SHOULD be called on submit if form is VALID', () => {
     const data = pacient.validData
     wrapper.setData({ pacient: data })
     const serviceSpy = jest.spyOn(PacientService, 'post')

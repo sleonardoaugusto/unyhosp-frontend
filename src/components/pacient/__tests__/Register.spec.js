@@ -24,14 +24,6 @@ describe('Register.vue', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  it('form fields should be mandatory', () => {
-    const errors = wrapper.findAll('.error--message')
-    expect(errors.at(0).text()).toBe('Campo obrigatório')
-    expect(errors.at(1).text()).toBe('Campo obrigatório')
-    expect(errors.at(2).text()).toBe('Campo obrigatório')
-    expect(errors.at(3).text()).toBe('Campo obrigatório')
-  })
-
   it('feedback form validation should appear', () => {
     wrapper.setData({ pacient: pacient.invalidData })
     wrapper.vm.$forceUpdate()

@@ -60,18 +60,12 @@ export default {
   methods: {
     submit() {
       this.$v.$touch()
-      if (this.$v.$invalid) {
-        this.submitStatus = 'ERROR'
-      } else {
-        // do your submit logic here
-        this.submitStatus = 'PENDING'
-        this.submitStatus = 'OK'
+      if (!this.$v.$invalid) {
         PacientService.post(this.data)
           .then(() => {
             const payload = { message: 'Cadastro realizado!', type: 'success' }
             this.add(payload)
           })
-
       }
     },
     ...mapActions({

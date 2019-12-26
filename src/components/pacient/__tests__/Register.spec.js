@@ -58,6 +58,6 @@ describe('Register.vue', () => {
     wrapper.setData({ pacient: pacient.validData })
     const serviceSpy = jest.spyOn(PacientService, 'post')
     wrapper.vm.submit()
-    expect(serviceSpy).toHaveBeenCalled()
+    expect(serviceSpy).toHaveBeenCalledWith(pacient.validData)
   })
 })

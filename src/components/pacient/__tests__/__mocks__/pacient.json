@@ -1,0 +1,14 @@
+{
+  "invalidData": {
+    "name": "",
+    "document_id": "9999999999",
+    "email": "mariajoaquinha@gmail.c",
+    "date_of_birth": "06/08/199"
+  },
+  "validData": {
+    "name": "Maria Capela",
+    "document_id": "99999999999",
+    "email": "mariajoaquina@gmail.com",
+    "date_of_birth": "06/08/1995"
+  }
+}

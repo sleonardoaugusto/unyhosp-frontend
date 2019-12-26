@@ -22,7 +22,7 @@ describe('Pacient/Register.vue', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  it('click button must call registerPacient method', () => {
+  it('click button must call submit method', () => {
     const submit = jest.fn()
     wrapper.setMethods({ submit })
     wrapper.find('form').trigger('submit')

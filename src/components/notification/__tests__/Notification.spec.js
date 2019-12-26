@@ -13,9 +13,6 @@ describe('Notification', () => {
           message: 'Problema de conexão: Network Error',
           type: 'error'
         }
-      },
-      methods: {
-        close
       }
     })
   })
@@ -24,7 +21,8 @@ describe('Notification', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  it('span click must trigger close method', () => {
+  it('span click should trigger close method', () => {
+    wrapper.setMethods({ close })
     wrapper.find(BaseIcon).trigger('click')
     expect(close).toHaveBeenCalled()
   })

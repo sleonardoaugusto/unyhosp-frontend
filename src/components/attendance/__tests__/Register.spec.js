@@ -40,7 +40,7 @@ describe('Register.vue', () => {
     expect(setPacient).toHaveBeenCalled()
   })
 
-  it('setPacient method must set a new inputValue', () => {
+  it('setPacient method should set a new inputValue', () => {
     const data = { name: 'Maria Joaquina Almeida' }
     wrapper.vm.setPacient(data)
     expect(wrapper.vm.inputValue).toBe(data.name)

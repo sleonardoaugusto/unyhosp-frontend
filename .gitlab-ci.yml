@@ -12,7 +12,7 @@ test:
     # Install vuecli
     - npm install -g @vue/cli
     # Install dependencies
-    - npm installk
+    - npm install
     # Build App
     - npm run test:unit
 

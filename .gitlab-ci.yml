@@ -13,6 +13,8 @@ test:
     - npm install -g @vue/cli
     # Install dependencies
     - npm install
+    # Clear npm cache
+    - npm cache clean -f
     # Build App
     - vue-cli-service test:unit
 

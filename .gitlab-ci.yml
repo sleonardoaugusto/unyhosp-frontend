@@ -4,6 +4,9 @@ stages:
   - deploy
 
 test:
+  image: node:10.15.0-stretch
+  only:
+    - master
   stage: test
   script:
     # Install vuecli

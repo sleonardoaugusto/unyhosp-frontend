@@ -4,7 +4,7 @@ stages:
   - deploy
 
 test:
-  image: node:10.15.0-stretch
+  image: node:lts-alpine
   only:
     - master
   stage: test

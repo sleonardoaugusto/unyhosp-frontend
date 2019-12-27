@@ -12,12 +12,12 @@ test:
     # Install vuecli
     - npm install -g @vue/cli
     # Install dependencies
-    - npm install
+    - npm installk
     # Build App
-    - ./node_modules/.bin/vue-cli-service test:unit
+    - npm run test:unit
 
 build prod:
-  image: node:10.15.0-stretch
+  image: node:lts-alpine
   stage: build
   only:
     - tags

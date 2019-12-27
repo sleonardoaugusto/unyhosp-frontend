@@ -9,12 +9,12 @@ test:
     - master
   stage: test
   script:
+    # Clear npm cache
+    - npm cache clean -f
     # Install vuecli
     - npm install -g @vue/cli
     # Install dependencies
     - npm install
-    # Clear npm cache
-    - npm cache clean -f
     # Build App
     - vue-cli-service test:unit
 

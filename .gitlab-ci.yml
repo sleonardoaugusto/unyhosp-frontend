@@ -10,7 +10,7 @@ test:
   stage: test
   script:
     # Install vuecli
-    - npm install -g @vue/cli@latest
+    - npm install -g @vue/cli
     # Install dependencies
     - npm install
     # Build App

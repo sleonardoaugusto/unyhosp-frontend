@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import utis from '@/mocks/utis'
 
 export default {
   name: 'UTIList',
@@ -21,7 +20,8 @@ export default {
   }),
   created() {
     const hospitalId = this.$route.params.hospitalId
-    this.utis = utis.data.filter(u => u.hospital_id == hospitalId)
+    /* TODO
+    *   Get hospital by id*/
   }
 }
 </script>

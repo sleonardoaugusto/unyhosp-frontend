@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import beds from '@/mocks/beds'
 import BedCard from '@/components/beds/BedCard'
 
 export default {
@@ -17,7 +16,8 @@ export default {
     beds: []
   }),
   created() {
-    this.beds = beds.data
+    /* TODO
+    *   Get beds*/
   }
 }
 </script>

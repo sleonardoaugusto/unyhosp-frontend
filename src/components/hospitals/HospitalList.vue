@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import hospitals from '@/mocks/hospitals'
 
 export default {
   name: 'HospitalList',
@@ -28,7 +27,9 @@ export default {
     hospitals: []
   }),
   created() {
-    this.hospitals = hospitals.data
+    /* TODO
+    *   Get hospitals
+    */
   }
 }
 </script>

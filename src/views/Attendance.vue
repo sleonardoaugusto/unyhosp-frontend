@@ -8,16 +8,12 @@
 </template>
 
 <script>
-import attendance from '@/mocks/attendance'
 
 export default {
   name: 'Pacient',
   data: () => ({
     attendance: {}
-  }),
-  created() {
-    this.attendance = attendance.data
-  }
+  })
 }
 </script>
 

@@ -9,9 +9,7 @@ import Vuex from 'vuex'
 import flushPromises from 'flush-promises'
 
 jest.mock('@/services/PacientService', () => ({
-  post: () => {
-    return Promise.resolve()
-  }
+  post: () => (Promise.resolve())
 }))
 
 const localVue = createLocalVue()
@@ -84,6 +82,13 @@ describe('Register.vue', () => {
     const serviceSpy = jest.spyOn(PacientService, 'post')
     wrapper.find('form').trigger('submit')
     expect(serviceSpy).not.toHaveBeenCalled()
+  })
+
+  it('PacientService post method SHOULD be called on submit if data is VALID', () => {
+    wrapper.setData({ pacient: pacient.validData })
+    const serviceSpy = jest.spyOn(PacientService, 'post')
+    wrapper.find('form').trigger('submit')
+    expect(serviceSpy).toHaveBeenCalledWith(pacient.validData)
   })
 
   it('Promise resolved should call notification add store module method', async () => {

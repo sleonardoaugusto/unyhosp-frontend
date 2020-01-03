@@ -5,18 +5,50 @@ import VueTheMask from 'vue-the-mask'
 import Vuelidate from 'vuelidate'
 import PacientService from '@/services/PacientService'
 import pacient from '@/components/pacient/__tests__/__mocks__/pacient'
+import Vuex from 'vuex'
+import flushPromises from 'flush-promises'
+
+jest.mock('@/services/PacientService', () => ({
+  post: () => {
+    return Promise.resolve()
+  }
+}))
 
 const localVue = createLocalVue()
+
 localVue.use(VueRouter)
 localVue.use(VueTheMask)
 localVue.use(Vuelidate)
+localVue.use(Vuex)
 
 describe('Register.vue', () => {
   let wrapper
 
+  let store
+  let state
+  let actions
+
   beforeEach(() => {
+    state = {
+      notifications: []
+    }
+
+    actions = {
+      'notification/add': jest.fn()
+    }
+
+    store = new Vuex.Store({
+      modules: {
+        notification: {
+          state,
+          actions
+        }
+      }
+    })
+
     wrapper = shallowMount(Register, {
-      localVue
+      localVue,
+      store
     })
   })
 
@@ -51,13 +83,13 @@ describe('Register.vue', () => {
     wrapper.setData({ pacient: pacient.invalidData })
     const serviceSpy = jest.spyOn(PacientService, 'post')
     wrapper.find('form').trigger('submit')
-    expect(serviceSpy).toBeCalledTimes(0)
+    expect(serviceSpy).not.toHaveBeenCalled()
   })
 
-  it('PacientService post method SHOULD be called on submit if data is VALID', () => {
+  it('Promise resolved should call notification add store module method', async () => {
     wrapper.setData({ pacient: pacient.validData })
-    const serviceSpy = jest.spyOn(PacientService, 'post')
     wrapper.find('form').trigger('submit')
-    expect(serviceSpy).toHaveBeenCalledWith(pacient.validData)
+    await flushPromises()
+    expect(actions['notification/add']).toHaveBeenCalled()
   })
 })

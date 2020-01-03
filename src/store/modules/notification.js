@@ -21,10 +21,10 @@ export const mutations = {
 }
 
 export const actions = {
-  add({ commit }, notification) {
-    commit('PUSH', notification)
+  async add({ commit }, notification) {
+    await commit('PUSH', notification)
   },
-  remove({ commit }, notificationToRemove) {
-    commit('DELETE', notificationToRemove)
+  async remove({ commit }, notificationToRemove) {
+    await commit('DELETE', notificationToRemove)
   }
 }

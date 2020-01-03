@@ -68,6 +68,9 @@ export default {
           })
       }
     },
+    test() {
+      return {}
+    },
     ...mapActions({
       add: 'notification/add'
     })

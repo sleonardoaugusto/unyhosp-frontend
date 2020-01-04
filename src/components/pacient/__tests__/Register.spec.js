@@ -8,10 +8,6 @@ import pacient from '@/components/pacient/__tests__/__mocks__/pacient'
 import Vuex from 'vuex'
 import flushPromises from 'flush-promises'
 
-jest.mock('@/services/PacientService', () => ({
-  post: () => (Promise.resolve())
-}))
-
 const localVue = createLocalVue()
 
 localVue.use(VueRouter)
@@ -92,6 +88,7 @@ describe('Register.vue', () => {
   })
 
   it('Promise resolved should call notification add store module method', async () => {
+    PacientService.post = jest.fn(() => Promise.resolve())
     wrapper.setData({ pacient: pacient.validData })
     wrapper.find('form').trigger('submit')
     await flushPromises()

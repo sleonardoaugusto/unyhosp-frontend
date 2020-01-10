@@ -1,10 +1,10 @@
 import { shallowMount } from '@vue/test-utils'
-import Edit from '@/components/attendance/Edit'
+import AttendanceEdit from '@/components/attendance/AttendanceEdit'
 
-describe('Edit.vue', () => {
+describe('AttendanceEdit.vue', () => {
   let wrapper
 
-  wrapper = shallowMount(Edit)
+  wrapper = shallowMount(AttendanceEdit)
 
   it('component is rendering properly', () => {
     expect(wrapper.html()).toMatchSnapshot()

@@ -103,7 +103,7 @@
 <script>
 export default {
   props: ['hospitalId'],
-  name: 'Edit',
+  name: 'AttendanceEdit',
   data: () => ({
     attendance: {
       created: '',

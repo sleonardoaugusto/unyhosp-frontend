@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Edit.vue component is rendering properly 1`] = `
+exports[`AttendanceEdit.vue component is rendering properly 1`] = `
 <div class="d-flex flex-wrap justify-content-center align-items-center flex-column">
   <div class="col-md-6 mb-3">
     <div class="row">

@@ -32,12 +32,12 @@ const routes = [
       path: 'register/:hospitalId',
       name: 'attendanceRegister',
       props: true,
-      component: () => import('@/components/attendance/Register')
+      component: () => import('@/components/attendance/AttendanceRegister')
     }, {
       path: 'edit/:attendanceId',
       name: 'attendanceEdit',
       props: true,
-      component: () => import('@/components/attendance/Edit')
+      component: () => import('@/components/attendance/AttendanceEdit')
     }]
   }, {
     path: '/pacient',
@@ -46,7 +46,7 @@ const routes = [
     children: [{
       path: 'register',
       name: 'pacientRegister',
-      component: () => import ('@/components/pacient/Register')
+      component: () => import ('@/components/pacient/PacientRegister')
     }]
   }
 ]

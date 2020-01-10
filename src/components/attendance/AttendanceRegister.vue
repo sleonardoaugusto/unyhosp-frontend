@@ -24,7 +24,7 @@ import PacientService from '@/services/PacientService'
 
 export default {
   props: ['hospitalId'],
-  name: 'Register',
+  name: 'AttendanceRegister',
   data: () => ({
     inputValue: '',
     pacients: [],

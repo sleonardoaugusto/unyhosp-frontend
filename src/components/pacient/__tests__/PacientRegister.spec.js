@@ -1,6 +1,6 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import VueRouter from 'vue-router'
-import Register from '@/components/pacient/Register'
+import PacientRegister from '@/components/pacient/PacientRegister'
 import VueTheMask from 'vue-the-mask'
 import Vuelidate from 'vuelidate'
 import PacientService from '@/services/PacientService'
@@ -15,7 +15,7 @@ localVue.use(VueTheMask)
 localVue.use(Vuelidate)
 localVue.use(Vuex)
 
-describe('Register.vue', () => {
+describe('PacientRegister.vue', () => {
   let wrapper
 
   let store
@@ -40,7 +40,7 @@ describe('Register.vue', () => {
       }
     })
 
-    wrapper = shallowMount(Register, {
+    wrapper = shallowMount(PacientRegister, {
       localVue,
       store
     })

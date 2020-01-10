@@ -13,7 +13,7 @@ exports[`AttendanceRegister.vue component is rendering properly 1`] = `
           Novo Paciente +
         </router-link-stub>
       </ul>
-    </div>
-  </form> <button type="submit" class="button button-grey">CADASTRAR</button>
+    </div> <button type="submit" class="button button-grey">CADASTRAR</button>
+  </form>
 </div>
 `;

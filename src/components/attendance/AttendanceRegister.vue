@@ -14,8 +14,8 @@
           </router-link>
         </ul>
       </div>
+      <button class="button button-grey" type="submit">CADASTRAR</button>
     </form>
-    <button class="button button-grey" type="submit">CADASTRAR</button>
   </div>
 </template>
 

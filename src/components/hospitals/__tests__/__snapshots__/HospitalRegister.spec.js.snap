@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HospitalRegister.vue component is rendering properly 1`] = `
+<div class="d-flex flex-wrap justify-content-center align-items-center flex-column">
+  <div class="col-md-6 mb-3">
+    <h2 class="type-h4 type-blue-smoke">Cadastrar Hospital</h2>
+  </div>
+  <form class="col-md-6">
+    <div class="form-group"><label for="HospitalName" class="form__label">Nome:</label> <input type="text" id="HospitalName" class="form__input">
+      <div class="error--message">Campo obrigatório</div>
+    </div> <button type="submit" class="button button-grey">CADASTRAR</button>
+  </form>
+</div>
+`;

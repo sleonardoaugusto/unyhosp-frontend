@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import HospitalService from '@/services/HospitalService'
 
 export default {
   name: 'HospitalList',
@@ -27,9 +28,15 @@ export default {
     hospitals: []
   }),
   created() {
-    /* TODO
-    *   Get hospitals
-    */
+    this.getData()
+  },
+  methods: {
+    getData() {
+      HospitalService.get()
+        .then((res) => {
+          this.hospitals = res.data
+        })
+    }
   }
 }
 </script>

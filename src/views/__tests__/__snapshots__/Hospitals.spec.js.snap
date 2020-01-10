@@ -7,8 +7,7 @@ exports[`Hospitals.vue renders component properly 1`] = `
       <h1 class="type-h3 type-blue-smoke">Hospitais</h1>
     </div>
   </div>
-  <div class="row">
-    <hospital-list-stub></hospital-list-stub>
-  </div>
+  <!---->
+  <router-view-stub name="default"></router-view-stub>
 </div>
 `;

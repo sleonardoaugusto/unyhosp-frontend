@@ -99,6 +99,9 @@
 }
 
 .button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   cursor: pointer;
   padding: .6rem;
   border-radius: .3rem;

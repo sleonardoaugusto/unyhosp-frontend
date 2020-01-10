@@ -5,19 +5,31 @@
         <h1 class="type-h3 type-blue-smoke">Hospitais</h1>
       </div>
     </div>
-    <div class="row">
+    <div v-if="showList" class="row">
+      <router-link :to="{name: 'hospitalRegister'}" class="button button-grey">
+        <BaseIcon name="plus-circle"/>
+        Novo Hospital
+      </router-link>
       <hospital-list/>
     </div>
+    <router-view/>
   </div>
 </template>
 
 <script>
 import HospitalList from '@/components/hospitals/HospitalList'
+import BaseIcon from '@/components/common/BaseIcon'
 
 export default {
   name: 'home',
   components: {
-    HospitalList
+    HospitalList,
+    BaseIcon
+  },
+  computed: {
+    showList() {
+      return this.$route.name == 'hospitals'
+    }
   }
 }
 </script>

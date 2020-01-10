@@ -15,7 +15,13 @@ const routes = [
   }, {
     path: '/hospitais',
     name: 'hospitals',
-    component: Hospitals
+    component: Hospitals,
+    children: [{
+      path: 'register',
+      name: 'hospitalRegister',
+      props: true,
+      component: () => import('@/components/hospitals/HospitalRegister')
+    }]
   }, {
     path: '/hospital/:hospitalId/uti/',
     name: 'hospital-utis',

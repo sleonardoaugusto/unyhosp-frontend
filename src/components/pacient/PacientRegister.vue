@@ -36,7 +36,6 @@
 
 <script>
 import PacientService from '@/services/PacientService'
-import { mapActions } from 'vuex'
 import { required, email, minLength } from 'vuelidate/lib/validators'
 
 export default {
@@ -62,15 +61,8 @@ export default {
       this.$v.$touch()
       if (!this.$v.$invalid) {
         PacientService.post(this.pacient)
-          .then(() => {
-            const payload = { message: 'Cadastro realizado!', type: 'success' }
-            this.add(payload)
-          })
       }
-    },
-    ...mapActions({
-      add: 'notification/add'
-    })
+    }
   }
 }
 </script>

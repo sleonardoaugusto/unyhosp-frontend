@@ -10,6 +10,8 @@ const apiClient = axios.create({
 })
 
 apiClient.interceptors.response.use((response) => {
+  const message = 'Operação realizada com sucesso!'
+  index.dispatch('notification/add', { message: message, type: 'success' }, { root: true })
   return response
 }, error => {
   const message = 'Houve um problema na comunicação com o servidor, contate seu Administrador.'

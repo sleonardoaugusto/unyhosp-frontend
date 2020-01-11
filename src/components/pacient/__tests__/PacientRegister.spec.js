@@ -5,44 +5,20 @@ import VueTheMask from 'vue-the-mask'
 import Vuelidate from 'vuelidate'
 import PacientService from '@/services/PacientService'
 import pacient from '@/components/pacient/__tests__/__mocks__/pacient'
-import Vuex from 'vuex'
-import flushPromises from 'flush-promises'
 
 const localVue = createLocalVue()
 
 localVue.use(VueRouter)
 localVue.use(VueTheMask)
 localVue.use(Vuelidate)
-localVue.use(Vuex)
 
 describe('PacientRegister.vue', () => {
   let wrapper
 
-  let store
-  let state
-  let actions
-
   beforeEach(() => {
-    state = {
-      notifications: []
-    }
-
-    actions = {
-      'notification/add': jest.fn()
-    }
-
-    store = new Vuex.Store({
-      modules: {
-        notification: {
-          state,
-          actions
-        }
-      }
-    })
 
     wrapper = shallowMount(PacientRegister, {
-      localVue,
-      store
+      localVue
     })
   })
 
@@ -85,13 +61,5 @@ describe('PacientRegister.vue', () => {
     const serviceSpy = jest.spyOn(PacientService, 'post')
     wrapper.find('form').trigger('submit')
     expect(serviceSpy).toHaveBeenCalledWith(pacient.validData)
-  })
-
-  it('Promise resolved should call notification add store module method', async () => {
-    PacientService.post = jest.fn(() => Promise.resolve())
-    wrapper.setData({ pacient: pacient.validData })
-    wrapper.find('form').trigger('submit')
-    await flushPromises()
-    expect(actions['notification/add']).toHaveBeenCalled()
   })
 })

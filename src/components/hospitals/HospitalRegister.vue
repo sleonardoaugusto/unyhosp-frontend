@@ -16,7 +16,6 @@
 
 <script>
 import HospitalService from '@/services/HospitalService'
-import { mapActions } from 'vuex'
 import { required } from 'vuelidate/lib/validators'
 
 export default {
@@ -36,15 +35,8 @@ export default {
       this.$v.$touch()
       if (!this.$v.$invalid) {
         HospitalService.post(this.hospital)
-          .then(() => {
-            const payload = { message: 'Cadastro realizado!', type: 'success' }
-            this.add(payload)
-          })
       }
-    },
-    ...mapActions({
-      add: 'notification/add'
-    })
+    }
   }
 }
 </script>

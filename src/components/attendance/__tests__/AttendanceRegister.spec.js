@@ -1,9 +1,12 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import AttendanceRegister from '@/components/attendance/AttendanceRegister'
 import VueRouter from 'vue-router'
+import AttendanceService from '@/services/AttendanceService'
+import Vuelidate from 'vuelidate'
 
 const localVue = createLocalVue()
 localVue.use(VueRouter)
+localVue.use(Vuelidate)
 
 describe('AttendanceRegister.vue', () => {
   let wrapper
@@ -43,7 +46,7 @@ describe('AttendanceRegister.vue', () => {
   it('setPacient method should set a new inputValue', () => {
     const data = { name: 'Maria Joaquina Almeida' }
     wrapper.vm.setPacient(data)
-    expect(wrapper.vm.inputValue).toBe(data.name)
+    expect(wrapper.vm.pacientName).toBe(data.name)
   })
 
   it('submit method should be called at submit trigger', () => {
@@ -51,5 +54,20 @@ describe('AttendanceRegister.vue', () => {
     wrapper.setMethods({ submit })
     wrapper.find('form').trigger('submit')
     expect(submit).toHaveBeenCalled()
+  })
+
+  it('AttendanceService post method should NOT be called on submit if data is INVALID', () => {
+    const serviceSpy = jest.spyOn(AttendanceService, 'post')
+    wrapper.find('form').trigger('submit')
+    expect(serviceSpy).not.toHaveBeenCalled()
+  })
+
+  it('AttendanceService post method SHOULD be called on submit if data is VALID', () => {
+    const data = { pacientId: 1, hospitalId: 1, pacientName: 'Maria' }
+    wrapper.setData(data)
+    const serviceSpy = jest.spyOn(AttendanceService, 'post')
+    wrapper.find('form').trigger('submit')
+    const expected = { hospital: 1, pacient: 1 }
+    expect(serviceSpy).toHaveBeenCalledWith(expected)
   })
 })

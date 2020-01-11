@@ -7,6 +7,7 @@ exports[`AttendanceRegister.vue component is rendering properly 1`] = `
   </div>
   <form class="col-md-6">
     <div class="form-group"><label for="PacientName" class="form__label">Paciente:</label> <input type="text" id="PacientName" class="form__input">
+      <div class="error--message">Campo obrigatório</div>
       <ul class="live-search__dropdown" style="display: none;">
         <li class="live-search__item">Paul Green</li>
         <router-link-stub to="[object Object]" tag="li" event="click" class="live-search__item type-blue-smoke type-h8">

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import UTIList from '@/components/UTIs/UTIList'
 import utis from '@/components/UTIs/__tests__/__mocks__/utis'
 import UTIService from '@/services/UTIService'
+import flushPromises from 'flush-promises'
 
 const localVue = createLocalVue()
 localVue.use(VueRouter)
@@ -23,9 +24,10 @@ describe('HospitalList.vue', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  it('UTIService get should be called on created lifecycle hook', () => {
-    const spy = jest.spyOn(UTIService, 'get')
-    wrapper = mount(UTIList, { localVue, router })
-    expect(spy).toHaveBeenCalled()
+  it('UTIService get should be called on created lifecycle hook', async () => {
+    UTIService.get = jest.fn(() => Promise.resolve(utis))
+    wrapper = shallowMount(UTIList, { localVue, router })
+    await flushPromises()
+    expect(wrapper.vm.utis).toBe(utis.data)
   })
 })

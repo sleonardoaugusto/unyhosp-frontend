@@ -10,7 +10,8 @@ const apiClient = axios.create({
 })
 
 apiClient.interceptors.response.use((response) => {
-  if (response.config.method == 'post') {
+  const method = response.config.method
+  if (method == 'post') {
     const message = 'Operação realizada com sucesso!'
     index.dispatch('notification/add', { message: message, type: 'success' }, { root: true })
   }

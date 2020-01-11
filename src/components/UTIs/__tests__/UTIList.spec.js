@@ -5,11 +5,7 @@ import utis from '@/components/UTIs/__tests__/__mocks__/utis'
 
 const localVue = createLocalVue()
 localVue.use(VueRouter)
-
-const routes = [{ path: '/utis', component: UTIList }]
-const router = new VueRouter({
-  routes
-})
+const router = new VueRouter()
 
 describe('HospitalList.vue', () => {
   let wrapper
@@ -24,5 +20,9 @@ describe('HospitalList.vue', () => {
   it('component is rendering properly', () => {
     wrapper.setData({ utis: utis.data })
     expect(wrapper.html()).toMatchSnapshot()
+  })
+
+  it('UTIService get should be called on created lifecycle hook', () => {
+
   })
 })

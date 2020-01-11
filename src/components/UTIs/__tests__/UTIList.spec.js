@@ -1,7 +1,8 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils'
+import { mount, shallowMount, createLocalVue } from '@vue/test-utils'
 import VueRouter from 'vue-router'
 import UTIList from '@/components/UTIs/UTIList'
 import utis from '@/components/UTIs/__tests__/__mocks__/utis'
+import UTIService from '@/services/UTIService'
 
 const localVue = createLocalVue()
 localVue.use(VueRouter)
@@ -23,6 +24,8 @@ describe('HospitalList.vue', () => {
   })
 
   it('UTIService get should be called on created lifecycle hook', () => {
-
+    const spy = jest.spyOn(UTIService, 'get')
+    wrapper = mount(UTIList, { localVue, router })
+    expect(spy).toHaveBeenCalled()
   })
 })

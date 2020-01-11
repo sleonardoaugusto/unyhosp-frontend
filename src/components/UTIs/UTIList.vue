@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import UTIService from '@/services/UTIService'
 
 export default {
   name: 'UTIList',
@@ -20,8 +21,10 @@ export default {
   }),
   created() {
     const hospitalId = this.$route.params.hospitalId
-    /* TODO
-    *   Get hospital by id*/
+    UTIService.get()
+      .then((res) => {
+        this.utis = res.data
+      })
   }
 }
 </script>

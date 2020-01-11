@@ -40,16 +40,16 @@ describe('HospitalRegister.vue', () => {
   })
 
   it('HospitalService post method should NOT be called on submit if data is INVALID', () => {
-    const serviceSpy = jest.spyOn(HospitalService, 'post')
+    const spy = jest.spyOn(HospitalService, 'post')
     wrapper.find('form').trigger('submit')
-    expect(serviceSpy).not.toHaveBeenCalled()
+    expect(spy).not.toHaveBeenCalled()
   })
 
   it('HospitalService post method SHOULD be called on submit if data is VALID', () => {
     const data = { name: 'São Joaquim' }
     wrapper.setData({ hospital: data })
-    const serviceSpy = jest.spyOn(HospitalService, 'post')
+    const spy = jest.spyOn(HospitalService, 'post')
     wrapper.find('form').trigger('submit')
-    expect(serviceSpy).toHaveBeenCalledWith(data)
+    expect(spy).toHaveBeenCalledWith(data)
   })
 })

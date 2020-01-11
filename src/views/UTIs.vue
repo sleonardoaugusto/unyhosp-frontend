@@ -2,7 +2,7 @@
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-12 d-flex justify-content-center">
-        <h1>UTIs</h1>
+        <h1 class="type-h3 type-blue-smoke">UTIs</h1>
       </div>
     </div>
     <div class="row">

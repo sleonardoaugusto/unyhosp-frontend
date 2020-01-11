@@ -3,7 +3,7 @@
     <router-link
       v-for="(u, i) in utis"
       :key="i"
-      class="card col-md-5"
+      class="card col-md-3"
       :to="{name: 'uti-beds', params: {utiId: u.id}}"
     >
       <p class="card__name">{{ u.name }}</p>

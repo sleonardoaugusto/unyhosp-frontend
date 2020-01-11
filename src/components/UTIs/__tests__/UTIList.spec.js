@@ -1,4 +1,4 @@
-import { mount, shallowMount, createLocalVue } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
 import VueRouter from 'vue-router'
 import UTIList from '@/components/UTIs/UTIList'
 import utis from '@/components/UTIs/__tests__/__mocks__/utis'

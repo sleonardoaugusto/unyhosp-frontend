@@ -8,7 +8,7 @@ exports[`HospitalRegister.vue component is rendering properly 1`] = `
   <form class="col-md-6">
     <div class="form-group"><label for="HospitalName" class="form__label">Nome:</label> <input type="text" id="HospitalName" class="form__input">
       <div class="error--message">Campo obrigatório</div>
-    </div> <button type="submit" class="button button-grey">CADASTRAR</button>
+    </div> <button type="submit" class="button button-green">CADASTRAR</button>
   </form>
 </div>
 `;

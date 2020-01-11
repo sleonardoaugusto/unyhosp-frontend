@@ -6,7 +6,7 @@
       </div>
     </div>
     <div v-if="showList" class="row">
-      <router-link :to="{name: 'hospitalRegister'}" class="button button-grey">
+      <router-link :to="{name: 'hospitalRegister'}" class="button button-green">
         <BaseIcon name="plus-circle"/>
         Novo Hospital
       </router-link>

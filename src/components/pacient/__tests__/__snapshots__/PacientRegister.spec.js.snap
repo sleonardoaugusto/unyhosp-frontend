@@ -21,7 +21,7 @@ exports[`PacientRegister.vue component is rendering properly 1`] = `
     <div class="form-group"><label for="DateOfBirth" class="form__label">Data de Nascimento:</label> <input type="text" id="DateOfBirth" class="form__input">
       <div class="error--message date">Campo obrigatório</div>
       <!---->
-    </div> <button type="submit" class="button button-grey">CADASTRAR</button>
+    </div> <button type="submit" class="button button-green">CADASTRAR</button>
   </form>
 </div>
 `;

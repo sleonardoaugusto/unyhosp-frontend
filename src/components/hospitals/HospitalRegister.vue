@@ -9,7 +9,7 @@
         <input class="form__input" type="text" id="HospitalName" v-model.trim.lazy="$v.hospital.name.$model">
         <div v-if="!$v.hospital.name.required" class="error--message">Campo obrigatório</div>
       </div>
-      <button class="button button-grey" type="submit">CADASTRAR</button>
+      <button class="button button-green" type="submit">CADASTRAR</button>
     </form>
   </div>
 </template>

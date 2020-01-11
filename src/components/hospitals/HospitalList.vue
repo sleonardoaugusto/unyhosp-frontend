@@ -11,7 +11,7 @@
       </div>
       <div class="row justify-content-between w-100">
         <router-link :to="{name: 'attendanceRegister', params: {hospitalId: h.id}}"
-                     class="card__action type-blue-smoke">Novo atendimento
+                     class="card__action type-white">Novo atendimento
         </router-link>
         <span class="card__action type-yellow">Editar</span>
       </div>

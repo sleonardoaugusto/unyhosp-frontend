@@ -16,7 +16,7 @@
           </router-link>
         </ul>
       </div>
-      <button class="button button-grey" type="submit">CADASTRAR</button>
+      <button class="button button-green" type="submit">CADASTRAR</button>
     </form>
   </div>
 </template>

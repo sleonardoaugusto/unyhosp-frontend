@@ -29,7 +29,7 @@
         <div v-if="!$v.pacient.date_of_birth.required" class="error--message date">Campo obrigatório</div>
         <div v-if="!$v.pacient.date_of_birth.minLength" class="error--message date">Data inválida</div>
       </div>
-      <button class="button button-grey" type="submit">CADASTRAR</button>
+      <button class="button button-green" type="submit">CADASTRAR</button>
     </form>
   </div>
 </template>

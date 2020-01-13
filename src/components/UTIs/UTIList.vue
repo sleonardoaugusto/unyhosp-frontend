@@ -21,7 +21,7 @@ export default {
   }),
   created() {
     const hospitalId = this.$route.params.hospitalId
-    UTIService.get()
+    UTIService.getByHospitalId(hospitalId)
       .then((res) => {
         this.utis = res.data
       })

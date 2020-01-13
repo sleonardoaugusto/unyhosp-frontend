@@ -24,11 +24,17 @@ const routes = [
     }]
   }, {
     path: '/hospital/:hospitalId/uti/',
-    name: 'hospital-utis',
-    component: UTIs
+    name: 'UTIs',
+    component: UTIs,
+    children: [{
+      path: 'register',
+      name: 'UTIRegister',
+      props: true,
+      component: () => import('@/components/UTIs/UTIRegister')
+    }]
   }, {
     path: '/hospital/:hospitalId/uti/:utiId/beds/',
-    name: 'uti-beds',
+    name: 'beds',
     component: Beds
   }, {
     path: '/attendance',

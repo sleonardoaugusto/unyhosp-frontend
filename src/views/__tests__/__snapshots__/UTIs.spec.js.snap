@@ -7,8 +7,7 @@ exports[`UTIs.vue renders component properly 1`] = `
       <h1 class="type-h3 type-blue-smoke">UTIs</h1>
     </div>
   </div>
-  <div class="row">
-    <u-t-i-list-stub></u-t-i-list-stub>
-  </div>
+  <!---->
+  <router-view-stub name="default"></router-view-stub>
 </div>
 `;

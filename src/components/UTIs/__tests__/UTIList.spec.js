@@ -24,8 +24,8 @@ describe('HospitalList.vue', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  it('UTIService get should be called on created lifecycle hook', async () => {
-    UTIService.get = jest.fn(() => Promise.resolve(utis))
+  it('UTIService getByHospitalId service method should be called on created lifecycle hook', async () => {
+    UTIService.getByHospitalId = jest.fn(() => Promise.resolve(utis))
     wrapper = shallowMount(UTIList, { localVue, router })
     await flushPromises()
     expect(wrapper.vm.utis).toBe(utis.data)

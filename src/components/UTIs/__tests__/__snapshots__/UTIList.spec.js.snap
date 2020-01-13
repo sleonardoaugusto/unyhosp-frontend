@@ -3,13 +3,19 @@
 exports[`HospitalList.vue component is rendering properly 1`] = `
 <div class="col-md-12 d-flex justify-content-center flex-wrap">
   <router-link-stub to="[object Object]" tag="a" event="click" class="card col-md-3">
-    <p class="card__name">UTI A - São Joaquim</p>
+    <div class="row mb-5">
+      <p class="card__name">UTI A - São Joaquim</p>
+    </div>
   </router-link-stub>
   <router-link-stub to="[object Object]" tag="a" event="click" class="card col-md-3">
-    <p class="card__name">UTI B - São Joaquim</p>
+    <div class="row mb-5">
+      <p class="card__name">UTI B - São Joaquim</p>
+    </div>
   </router-link-stub>
   <router-link-stub to="[object Object]" tag="a" event="click" class="card col-md-3">
-    <p class="card__name">UTI C - São Joaquim</p>
+    <div class="row mb-5">
+      <p class="card__name">UTI C - São Joaquim</p>
+    </div>
   </router-link-stub>
 </div>
 `;

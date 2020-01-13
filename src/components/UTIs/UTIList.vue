@@ -6,7 +6,9 @@
       class="card col-md-3"
       :to="{name: 'uti-beds', params: {utiId: u.id}}"
     >
-      <p class="card__name">{{ u.name }}</p>
+      <div class="row mb-5">
+        <p class="card__name">{{ u.name }}</p>
+      </div>
     </router-link>
   </div>
 </template>

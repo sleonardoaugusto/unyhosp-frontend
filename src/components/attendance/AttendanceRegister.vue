@@ -6,7 +6,7 @@
     <form @submit.prevent="submit" class="col-md-6">
       <div class="form-group" :class="{ 'form-group--error': $v.pacientName.$error }">
         <label class="form__label" for="PacientName">Paciente:</label>
-        <input class="form__input" type="text" id="PacientName" v-model.trim.lazy="$v.pacientName.$model"
+        <input class="form__input" type="text" id="PacientName" v-model.trim="$v.pacientName.$model"
                @input="searchPacients">
         <div v-if="!$v.pacientName.required" class="error--message">Campo obrigatório</div>
         <ul v-show="showDropdown" class="live-search__dropdown">

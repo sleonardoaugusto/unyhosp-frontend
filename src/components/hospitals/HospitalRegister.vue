@@ -6,7 +6,7 @@
     <form @submit.prevent="submit" class="col-md-6">
       <div class="form-group" :class="{ 'form-group--error': $v.hospital.name.$error }">
         <label class="form__label" for="HospitalName">Nome:</label>
-        <input class="form__input" type="text" id="HospitalName" v-model.trim.lazy="$v.hospital.name.$model">
+        <input class="form__input" type="text" id="HospitalName" v-model.trim="$v.hospital.name.$model">
         <div v-if="!$v.hospital.name.required" class="error--message">Campo obrigatório</div>
       </div>
       <button class="button button-green" type="submit">CADASTRAR</button>

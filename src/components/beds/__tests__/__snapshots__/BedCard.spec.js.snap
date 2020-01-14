@@ -1,12 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BedCard.vue component is rendering properly 1`] = `
-<div class="card col-md-3">
+<router-link-stub to="[object Object]" tag="a" event="click" class="card col-md-3">
   <p class="card__name">Box A</p>
   <div class="card__preview">
     <p class="card__text-content">
       Paciente:
-      <router-link-stub to="[object Object]" tag="a" event="click">Maria Joaquina</router-link-stub>
     </p>
     <p class="card__text-content">
       Data:
@@ -18,5 +17,5 @@ exports[`BedCard.vue component is rendering properly 1`] = `
       Data:
       <span>UNIMED</span></p>
   </div>
-</div>
+</router-link-stub>
 `;

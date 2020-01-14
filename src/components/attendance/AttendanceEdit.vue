@@ -102,8 +102,8 @@
 
 <script>
 export default {
-  props: ['hospitalId'],
   name: 'AttendanceEdit',
+  props: ['hospitalId'],
   data: () => ({
     attendance: {
       created: '',

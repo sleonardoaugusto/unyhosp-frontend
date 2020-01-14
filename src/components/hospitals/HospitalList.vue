@@ -4,13 +4,13 @@
       v-for="(h, i) in hospitals"
       :key="i"
       class="card col-md-3"
-      :to="{name: 'UTIs', params: {hospitalId: h.id}}"
+      :to="{name: 'utis', params: {hospitalId: h.id}}"
     >
       <div class="row mb-5">
         <p class="card__name">{{ h.name }}</p>
       </div>
       <div class="row justify-content-between w-100">
-        <router-link :to="{name: 'attendanceRegister', params: {hospitalId: h.id}}"
+        <router-link :to="{name: 'attendance-register', params: {hospitalId: h.id}}"
                      class="card__action type-green">Novo atendimento
         </router-link>
         <span class="card__action type-yellow">Editar</span>

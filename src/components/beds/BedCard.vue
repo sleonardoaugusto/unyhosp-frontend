@@ -1,10 +1,9 @@
 <template>
-  <div class="card col-md-3">
+  <router-link :to="{name: 'bed-detail', params: {bedId: bed.id}}" class="card col-md-3">
     <p class="card__name">{{ bed.name }}</p>
     <div v-if="hasPacient" class="card__preview">
       <p class="card__text-content">
         Paciente:
-        <router-link :to="{name: 'attendance', params: {pacientId: bed.pacient.id}}">{{ bed.pacient.name }}</router-link>
       </p>
       <p class="card__text-content">
         Data:
@@ -24,7 +23,7 @@
         Vazio
       </p>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>

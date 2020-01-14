@@ -18,36 +18,41 @@ const routes = [
     component: Hospitals,
     children: [{
       path: 'register',
-      name: 'hospitalRegister',
+      name: 'hospital-register',
       props: true,
       component: () => import('@/components/hospitals/HospitalRegister')
     }]
   }, {
     path: '/hospital/:hospitalId/uti/',
-    name: 'UTIs',
+    name: 'utis',
     component: UTIs,
     children: [{
       path: 'register',
-      name: 'UTIRegister',
+      name: 'uti-register',
       props: true,
       component: () => import('@/components/UTIs/UTIRegister')
     }]
   }, {
     path: '/hospital/:hospitalId/uti/:utiId/beds/',
     name: 'beds',
-    component: Beds
+    component: Beds,
+    children: [{
+      path: '/hospital/:hospitalId/uti/:utiId/beds/:bedId',
+      name: 'bed-detail',
+      component: () => import('@/components/beds/BedDetail')
+    }]
   }, {
     path: '/attendance',
     name: 'attendance',
     component: Attendance,
     children: [{
       path: 'register/:hospitalId',
-      name: 'attendanceRegister',
+      name: 'attendance-register',
       props: true,
       component: () => import('@/components/attendance/AttendanceRegister')
     }, {
       path: 'edit/:attendanceId',
-      name: 'attendanceEdit',
+      name: 'attendance-edit',
       props: true,
       component: () => import('@/components/attendance/AttendanceEdit')
     }]
@@ -57,7 +62,7 @@ const routes = [
     component: Pacient,
     children: [{
       path: 'register',
-      name: 'pacientRegister',
+      name: 'pacient-register',
       component: () => import ('@/components/pacient/PacientRegister')
     }]
   }

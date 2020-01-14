@@ -11,7 +11,7 @@
         <div v-if="!$v.pacientName.required" class="error--message">Campo obrigatório</div>
         <ul v-show="showDropdown" class="live-search__dropdown">
           <li class="live-search__item" v-for="(p, i) in pacients" :key="i" @click="setPacient(p)">{{ p.name }}</li>
-          <router-link tag="li" :to="{name: 'pacientRegister'}" class="live-search__item type-blue-smoke type-h8">
+          <router-link tag="li" :to="{name: 'pacient-register'}" class="live-search__item type-blue-smoke type-h8">
             Novo Paciente +
           </router-link>
         </ul>
@@ -28,8 +28,8 @@ import { required } from 'vuelidate/lib/validators'
 
 
 export default {
-  props: ['hospitalId'],
   name: 'AttendanceRegister',
+  props: ['hospitalId'],
   data: () => ({
     pacientName: '',
     pacientId: '',

@@ -9,7 +9,7 @@ describe('AttendanceService.js', () => {
     expect(spy).toHaveBeenCalledWith('/attendances/')
   })
 
-  it('AttendanceService post method should post /attendances/ resouce with data', () => {
+  it('AttendanceService post method should post /attendances/ resource with data', () => {
     const data = attendance
     const spy = jest.spyOn(apiClient, 'post')
     AttendanceService.post(data)

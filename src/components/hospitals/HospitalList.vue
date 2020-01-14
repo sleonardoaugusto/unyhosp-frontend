@@ -4,7 +4,7 @@
       v-for="(h, i) in hospitals"
       :key="i"
       class="card col-md-3"
-      :to="{name: 'hospital-utis', params: {hospitalId: h.id}}"
+      :to="{name: 'UTIs', params: {hospitalId: h.id}}"
     >
       <div class="row mb-5">
         <p class="card__name">{{ h.name }}</p>

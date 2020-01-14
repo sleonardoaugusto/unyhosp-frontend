@@ -2,12 +2,13 @@
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-12 d-flex justify-content-center">
-        <h1>Leitos</h1>
+        <h1 class="type-h3 type-blue-smoke">Leitos</h1>
       </div>
     </div>
-    <div class="row">
+    <div v-if="showList" class="row">
       <bed-list/>
     </div>
+    <router-view/>
   </div>
 </template>
 
@@ -15,13 +16,14 @@
 import BedList from '@/components/beds/BedList'
 
 export default {
-  name: 'Bed',
+  name: 'home',
   components: {
     BedList
+  },
+  computed: {
+    showList() {
+      return this.$route.name === 'beds'
+    }
   }
 }
 </script>
-
-<style scoped>
-
-</style>

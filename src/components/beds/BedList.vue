@@ -6,6 +6,7 @@
 
 <script>
 import BedCard from '@/components/beds/BedCard'
+import Bedservice from '@/services/Bedservice'
 
 export default {
   name: 'BedList',
@@ -16,8 +17,10 @@ export default {
     beds: []
   }),
   created() {
-    /* TODO
-    *   Get beds*/
+    Bedservice.get()
+      .then((res) => {
+        this.beds = res.data
+      })
   }
 }
 </script>

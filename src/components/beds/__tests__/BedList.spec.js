@@ -3,11 +3,14 @@ import VueRouter from 'vue-router'
 import BedList from '@/components/beds/BedList'
 import BedCard from '@/components/beds/BedCard'
 import beds from '@/components/beds/__tests__/__mocks__/beds'
+import Bedservice from '@/services/Bedservice'
+import flushPromises from 'flush-promises'
 
 const localVue = createLocalVue()
 localVue.use(VueRouter)
+const router = new VueRouter()
 
-describe('HospitalList.vue', () => {
+describe('BedList.vue', () => {
   let wrapper
 
   beforeEach(() => {
@@ -31,5 +34,12 @@ describe('HospitalList.vue', () => {
     wrapper.setData({ beds: beds.data })
     const bedcard = wrapper.find(BedCard)
     expect(bedcard.exists()).toBeTruthy()
+  })
+
+  it('BedService get service method should be called on created lifecycle hook', async () => {
+    Bedservice.get = jest.fn(() => Promise.resolve(beds))
+    wrapper = shallowMount(BedList, { localVue, router })
+    await flushPromises()
+    expect(wrapper.vm.beds).toBe(beds.data)
   })
 })

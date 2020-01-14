@@ -22,8 +22,8 @@ export default {
     utis: []
   }),
   created() {
-    const hospitalId = this.$route.params.hospitalId
-    UTIService.getByHospitalId(hospitalId)
+    const id = this.$route.params.hospitalId
+    UTIService.getByHospitalId(id)
       .then((res) => {
         this.utis = res.data
       })

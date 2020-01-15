@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     showList() {
-      return this.$route.name == 'UTIs'
+      return this.$route.name === 'utis'
     }
   }
 }

@@ -9,7 +9,7 @@ const localVue = createLocalVue()
 localVue.use(VueRouter)
 const router = new VueRouter()
 
-describe('HospitalList.vue', () => {
+describe('UTIList.vue', () => {
   let wrapper
 
   beforeEach(() => {

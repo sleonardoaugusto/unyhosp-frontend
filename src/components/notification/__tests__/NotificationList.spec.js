@@ -7,7 +7,7 @@ const localVue = createLocalVue()
 
 localVue.use(Vuex)
 
-describe('NotificationList', () => {
+describe('NotificationList.vue', () => {
   let wrapper
 
   let store
@@ -56,7 +56,7 @@ describe('NotificationList', () => {
   })
 
   it('calls close method at close-notification', () => {
-    const closeFunction = spyOn(wrapper.vm, 'close')
+    const closeFunction = jest.spyOn(wrapper.vm, 'close')
     wrapper.find(Notification).vm.$emit('close-notification')
     expect(closeFunction).toHaveBeenCalled()
   })

@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils'
 import Notification from '@/components/notification/Notification'
 import BaseIcon from '@/components/common/BaseIcon'
 
-describe('Notification', () => {
+describe('Notification.vue', () => {
   let wrapper
   const close = jest.fn()
 

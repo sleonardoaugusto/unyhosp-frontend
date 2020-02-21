@@ -6,7 +6,7 @@ import notificationFixture from './__mocks__/notificationFixture'
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
-describe('Notification Store module', () => {
+describe('notification.js', () => {
   let store
 
   store = new Vuex.Store({

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HospitalList.vue component is rendering properly 1`] = `
+exports[`UTIList.vue component is rendering properly 1`] = `
 <div class="col-md-12 d-flex justify-content-center flex-wrap">
   <router-link-stub to="[object Object]" tag="a" event="click" class="card col-md-3">
     <div class="row mb-5">

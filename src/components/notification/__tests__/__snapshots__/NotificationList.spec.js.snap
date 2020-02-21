@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NotificationList renders the component 1`] = `
+exports[`NotificationList.vue renders the component 1`] = `
 <div class="notification-container">
   <notification-stub notification="[object Object]"></notification-stub>
 </div>

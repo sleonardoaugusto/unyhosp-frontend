@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Notification renders component 1`] = `
+exports[`Notification.vue renders component 1`] = `
 <div class="notification-bar error">
   <p class="notification-bar__message">
     <baseicon-stub name="x-circle" width="16" height="16" class="c-pointer"></baseicon-stub>

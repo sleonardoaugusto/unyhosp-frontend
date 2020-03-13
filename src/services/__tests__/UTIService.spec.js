@@ -9,10 +9,10 @@ describe('UTIService.js', () => {
     expect(spy).toHaveBeenCalledWith('/utis/')
   })
 
-  it('UTIService post method should post /utis/ resource with data', () => {
+  it('UTIService post method should post /utis/ resource with data', async () => {
     const data = utis
     const spy = jest.spyOn(apiClient, 'post')
-    UTIService.post(data)
+    await UTIService.post(data)
     expect(spy).toHaveBeenCalledWith('/utis/', data)
   })
 })
